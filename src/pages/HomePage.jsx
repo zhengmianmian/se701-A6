@@ -6,14 +6,14 @@ function HomePage() {
     const navigate = useNavigate();
     const {hello, setHello} = useContext(AppContext)
     const navigateToLevelTest = () => {
-        // 👇️ navigate to /contacts
+        // navigate to /contacts
         navigate('/level-test');
     };
     return (
         <div>
             <h1>Math gardener</h1>
             <p>{hello}</p>
-            <Button onClick={navigateToLevelTest}>Starting quiz</Button>
+            <Button onClick={navigateToLevelTest} variant="contained" color="primary">Starting quiz</Button>
         </div>
     );
 }
