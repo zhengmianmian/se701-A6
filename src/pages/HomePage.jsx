@@ -14,6 +14,7 @@ function HomePage() {
             <h1>Math gardener</h1>
             <p>{hello}</p>
             <Button onClick={navigateToLevelTest} variant="contained" color="primary">Starting quiz</Button>
+            <p>A short quiz to determine your mathematical process.</p>
         </div>
     );
 }

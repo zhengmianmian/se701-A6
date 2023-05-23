@@ -6,10 +6,12 @@ export const AppContext = React.createContext({});
 export function AppContextProvider({ children }) {
 
     const [hello, setHello] = useState('Hello world!');
-
+    const [score, setScore] = useState(0);
     const context = {
         hello,
-        setHello
+        setHello,
+        score,
+        setScore
     }
 
     return (
