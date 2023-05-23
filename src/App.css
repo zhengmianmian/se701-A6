@@ -1,21 +1,12 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --main-height : 80vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +15,36 @@
   color: white;
 }
 
-.App-link {
+.link {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 20px;
   color: #61dafb;
+  transition: color 0.5s, background-color 0.5s;
+}
+.link:hover{
+  background-color: #61dafb;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App > .main{
+  margin: 5px;
+  min-height: var(--main-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .routes {
+  margin: 5px;
+  min-height: var(--main-height);
+  width: 80%;
+  border: 1px solid #61dafb;
+}
+.main .flower {
+  margin: 5px;
+  min-height: var(--main-height);
+  width: 20%;
+  border: 1px solid #61dafb;
 }
