@@ -2,7 +2,7 @@
   text-align: center;
 }
 :root {
-  --main-height : 80vh;
+  --main-height : 90vh;
 }
 .App header {
   background-color: #282c34;
@@ -30,11 +30,12 @@
 }
 
 .App > .main{
-  margin: 5px;
+  margin: 0;
   min-height: var(--main-height);
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .main .routes {
   margin: 5px;

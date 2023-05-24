@@ -1,0 +1,31 @@
+.btnContainer{
+    display: grid;
+    grid-template-columns: auto auto; /* Two columns */
+    column-gap: 100px; /* Gap between buttons */
+    row-gap: 40px;
+    justify-content: center;
+}
+.topicBtn{
+    width: 200px;
+}
+.topic-intro{
+    margin: 20px auto;
+    width: 500px;
+    text-align: left;
+}
+.chapter-btn-container{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 40px;
+    justify-content: start;
+}
+.shape-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.chapter-content{
+    width: 70%;
+    min-height: 500px;
+    
+}

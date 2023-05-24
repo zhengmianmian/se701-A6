@@ -6,6 +6,9 @@ import LevelTestPage from "./pages/LevelTestPage"
 import LearnPage from "./pages/LearnPage";
 import AboutMePage from "./pages/AboutMePage";
 import ResourcesPage from "./pages/ResourcesPage";
+import GeometryPage from "./pages/GeometryPage";
+import TwoDShapePage from "./pages/TwoDShapePage";
+import Chapter from "./pages/Chapter";
 function App() {
 
   return (
@@ -22,11 +25,15 @@ function App() {
       <main className="main">
         <div className="routes">
           <Routes>
-            <Route path="/" element={<PageLayout />}>
+            <Route path="/" element={<PageLayout />} >
               <Route index element={<Navigate to="home" replace />} />
               <Route path="home" element={<HomePage />} />
               <Route path="level-test" element={<LevelTestPage />} />
-              <Route path="learn" element={<LearnPage />} />
+              <Route path="learn" element={<LearnPage />} ></Route>
+              <Route path="learn/geometry" element={<GeometryPage />} ></Route>
+              <Route path="learn/geometry/2d-shapes" element={<TwoDShapePage/>} >
+                <Route path="chapter1" element={<Chapter/>} ></Route>
+              </Route>
               <Route path="resources" element={<ResourcesPage />}  />
               <Route path="me" element={<AboutMePage/>} />
             </Route>
