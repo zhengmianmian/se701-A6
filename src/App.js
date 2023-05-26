@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import LevelTestPage from "./pages/LevelTestPage"
 import LearnPage from "./pages/LearnPage";
 import AboutMePage from "./pages/AboutMePage";
+import HintPage from "./pages/HintPage"
 import ResourcesPage from "./pages/ResourcesPage";
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
               <Route path="home" element={<HomePage />} />
               <Route path="level-test" element={<LevelTestPage />} />
               <Route path="learn" element={<LearnPage />} />
-              <Route path="resources" element={<ResourcesPage />}  />
+              <Route path="resources" element={<HintPage/>}  />
               <Route path="me" element={<AboutMePage/>} />
             </Route>
           </Routes>
