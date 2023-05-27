@@ -9,6 +9,7 @@ import ResourcesPage from "./pages/ResourcesPage";
 import GeometryPage from "./pages/GeometryPage";
 import TwoDShapePage from "./pages/TwoDShapePage";
 import Chapter from "./pages/Chapter";
+import MainFlower from "./pages/MainFlower";
 function App() {
 
   return (
@@ -41,7 +42,7 @@ function App() {
         </div>
 
         <div className="flower">
-          <h3>Your flower</h3>
+          <MainFlower />
         </div>
       </main>
     </div>
