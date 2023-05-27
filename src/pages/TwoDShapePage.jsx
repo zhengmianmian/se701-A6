@@ -1,34 +1,35 @@
 import Button from '@mui/material/Button';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Outlet } from "react-router-dom";
+
 function TwoDShapePage(props) {
     const navigate = useNavigate();
-    const chapters=[
+    const chapters = [
         {
-            name:'chapter1',
-            path:'/learn/geometry/2d-shapes/chapter1',
-            describe:'Identifying and Classifying'
+            name: 'chapter1',
+            path: '/learn/geometry/2d-shapes/chapter1',
+            describe: 'Identifying and Classifying'
         },
         {
-            name:'chapter2',
-            path:'/learn/geometry/2d-shapes',
-            describe:'Sides and Angles'
+            name: 'chapter2',
+            path: '/learn/geometry/2d-shapes',
+            describe: 'Sides and Angles'
         },
         {
-            name:'chapter3',
-            path:'/learn/geometry/2d-shapes',
-            describe:'Some stuff about Geometry'
+            name: 'chapter3',
+            path: '/learn/geometry/2d-shapes',
+            describe: 'Some stuff about Geometry'
         },
         {
-            name:'chapter4',
-            path:'/learn/geometry/2d-shapes',
-            describe:'Some stuff about Geometry'
+            name: 'chapter4',
+            path: '/learn/geometry/2d-shapes',
+            describe: 'Some stuff about Geometry'
         }
     ]
 
-    const chapterItems = chapters.map((item,index)=>
+    const chapterItems = chapters.map((item, index) =>
         <div key={index}>
-            <Button onClick={()=>navigate(item.path)} className="topicBtn" variant="contained" color="primary">{item.name}</Button>
+            <Button onClick={() => navigate(item.path)} className="topicBtn" variant="contained" color="primary">{item.name}</Button>
             <p>{item.describe}</p>
         </div>
     );
@@ -44,7 +45,7 @@ function TwoDShapePage(props) {
                     <Outlet />
                 </div>
             </div>
-            
+
         </div>
     );
 }
