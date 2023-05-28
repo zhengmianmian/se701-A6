@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import triangle from '../assets/images/Circle.png'
 import Button from '@mui/material/Button';
+import { TbBulb, TbInputSearch } from "react-icons/tb";
 //import React, {useState} from 'react';
 
 
@@ -76,10 +77,12 @@ function Chapter1Quiz() {
             <ButtonHint
                 style={{float: 'right'}}>
                 Ask ChatGPT
+                <TbInputSearch size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <ButtonHint
                 style={{float: 'right'}}>
                 Hint
+                <TbBulb size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <br></br>
             <p2>What shape is it?</p2>
