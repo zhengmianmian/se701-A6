@@ -41,13 +41,14 @@ const data = [
 function AboutMePage(props) {
     const {score, setScore} = useContext(AppContext)
     return (
-        <Container>
+      
+        <div>
             <Box py={2}>
                 <Typography variant="h3">Achievements</Typography>
                 <Typography variant="body1">Score: {score}</Typography>
             </Box>
-
-            <Grid container spacing={40}>
+            
+            <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
                     <Box py={10}>
                         <Typography variant="h3">Skill Matrix</Typography>
@@ -82,7 +83,9 @@ function AboutMePage(props) {
                     </Box>
                 </Grid>
             </Grid>
-        </Container>
+           
+        </div>
+      
     );
 }
 
