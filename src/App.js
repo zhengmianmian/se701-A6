@@ -9,6 +9,7 @@ import ResourcesPage from "./pages/ResourcesPage";
 import GeometryPage from "./pages/GeometryPage";
 import TwoDShapePage from "./pages/TwoDShapePage";
 import Chapter from "./pages/Chapter";
+import Reflections from "./pages/Reflections";
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
           <Link className="link" to="/learn" >LEARN</Link>
           <Link className="link" to="/resources">RESOURCE</Link>
           <Link className="link" to="/me">ME</Link>
+          <Link className="link" to="/reflections">REFLECTIONS</Link>
           
         </nav>
       </header>
@@ -36,6 +38,7 @@ function App() {
               </Route>
               <Route path="resources" element={<ResourcesPage />}  />
               <Route path="me" element={<AboutMePage/>} />
+              <Route path="reflections" element={<Reflections/>} />
             </Route>
           </Routes>
         </div>
