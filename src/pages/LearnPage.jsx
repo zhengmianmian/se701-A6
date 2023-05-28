@@ -31,7 +31,7 @@ function LearnPage(props) {
     ]
     
     const topicItems = topics.map((item,index)=>
-        <Button onClick={()=>navigate(item.path)} className="topicBtn" variant="contained" color="primary">{item.name}</Button>
+        <Button key={index} onClick={()=>navigate(item.path)} className="topicBtn" variant="contained" color="primary">{item.name}</Button>
     );
     return (
         <div>
