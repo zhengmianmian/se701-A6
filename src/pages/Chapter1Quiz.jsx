@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import triangle from '../assets/images/Triangle.png'
+import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { useNavigate} from 'react-router-dom';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
@@ -77,20 +78,20 @@ function Chapter1Quiz() {
 
     return (
         <>
-            <h1>Identify shapes Quiz</h1>
-            <p1>Q1. Answer the following addition problem:</p1>
+            <div className="quizHeader">Identify shapes Quiz</div>
+            <div className="quizHeader">Q1. Answer the following addition problem:</div>
             <ButtonHint
                 style={{float: 'right'}}>
                 Ask ChatGPT
-            <TbInputSearch size="1.5em" color="cornflowerblue"/>
+                <TbInputSearch size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <ButtonHint
                 style={{float: 'right'}}>
                 Hint
-            <TbBulb size="1.5em" color="cornflowerblue"/>
+                <TbBulb size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <br></br>
-            <p2>What shape is it?</p2>
+            <div className="quizQuestion">What shape is it?</div>
             <br></br>
             <img style={{width:170, height:170, alignSelf: 'center'}} src={triangle} alt="triagles" />
             <br></br>

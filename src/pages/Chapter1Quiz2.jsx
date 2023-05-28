@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import triangle from '../assets/images/Circle.png'
+import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
 //import React, {useState} from 'react';
@@ -72,8 +73,9 @@ function Chapter1Quiz() {
 
     return (
         <>
-            <h1>Identify shapes Quiz</h1>
-            <p1>Q2. Answer the following addition problem:</p1>
+            <div className="quizHeader">Identify shapes Quiz</div>
+            <div className="quizHeader">Q2. Answer the following addition problem:</div>
+           
             <ButtonHint
                 style={{float: 'right'}}>
                 Ask ChatGPT
@@ -85,7 +87,7 @@ function Chapter1Quiz() {
                 <TbBulb size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <br></br>
-            <p2>What shape is it?</p2>
+            <div className="quizQuestion">What shape is it?</div>
             <br></br>
             <img style={{width:170, height:170, alignSelf: 'center'}} src={triangle} alt="triagles" />
             <br></br>
