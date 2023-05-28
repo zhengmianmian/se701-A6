@@ -1,17 +1,13 @@
 import styled from '@emotion/styled';
-import triangle from '../assets/images/Triangle.png'
+import triangle from '../assets/images/Circle.png'
 import Button from '@mui/material/Button';
-import { useNavigate} from 'react-router-dom';
 //import React, {useState} from 'react';
 
 
 
 
 function Chapter1Quiz() {
-    const navigate = useNavigate();
-    const navigateToQuiz2 = () => {
-        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2');
-    };
+  
     const ButtonGroup = styled.button`
     background: white;
     color: black;
@@ -47,11 +43,11 @@ function Chapter1Quiz() {
         },
         {
             name:'Triangle',
-            answer:'correct'
+            answer:'wrong'
         },
         {
             name:'Circle',
-            answer:'wrong'
+            answer:'correct'
         },
         {
             name:'Pentagon',
@@ -76,7 +72,7 @@ function Chapter1Quiz() {
     return (
         <>
             <h1>Identify shapes Quiz</h1>
-            <p1>Q1. Answer the following addition problem:</p1>
+            <p1>Q2. Answer the following addition problem:</p1>
             <ButtonHint
                 style={{float: 'right'}}>
                 Ask ChatGPT
@@ -93,7 +89,7 @@ function Chapter1Quiz() {
 
             {buttonsItems}
             <br></br>
-            <Button onClick={navigateToQuiz2}
+            <Button 
                 color='primary'
                 style={{float: 'right'}}
                 size='small'>
