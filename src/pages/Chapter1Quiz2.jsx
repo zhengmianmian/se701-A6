@@ -3,7 +3,8 @@ import triangle from '../assets/images/Circle.png'
 import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
-//import React, {useState} from 'react';
+import { LuFlower2 } from "react-icons/lu";
+import React, {useState} from 'react';
 
 
 
@@ -58,12 +59,17 @@ function Chapter1Quiz() {
         
     ]
 
+    const [isCorrect, setCorrect] = useState(null);
+    const [show, setShow] = useState(false);
+
 
     function IsCorrect(answer){
         if(answer === 'correct'){
-            alert('Great!');
+           setCorrect(true);
+           setShow(true);
         }else{
-            alert('Try Again!')
+            setCorrect(false);
+            setShow(true);
         }
     }
 
@@ -93,6 +99,9 @@ function Chapter1Quiz() {
             <br></br>
 
             {buttonsItems}
+            <br></br>
+            {show && isCorrect && <div className="answer_react">Great!<LuFlower2 size="1.5em" color="cornflowerblue"/></div>}
+            {show && !isCorrect && <div className="answer_react">Try Again!</div>}
             <br></br>
             <Button 
                 color='primary'

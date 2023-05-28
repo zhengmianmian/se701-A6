@@ -4,7 +4,8 @@ import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { useNavigate} from 'react-router-dom';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
-//import React, {useState} from 'react';
+import { LuFlower2 } from "react-icons/lu";
+import React, {useState} from 'react';
 
 
 
@@ -14,6 +15,7 @@ function Chapter1Quiz() {
     const navigateToQuiz2 = () => {
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2');
     };
+
     const ButtonGroup = styled.button`
     background: white;
     color: black;
@@ -62,13 +64,16 @@ function Chapter1Quiz() {
         
     ]
 
+    const [isCorrect, setCorrect] = useState(null);
+    const [show, setShow] = useState(false);
 
     function IsCorrect(answer){
         if(answer === 'correct'){
-           
-            //alert('Great!');
+           setCorrect(true);
+           setShow(true);
         }else{
-            alert('Try Again!')
+            setCorrect(false);
+            setShow(true);
         }
     }
 
@@ -97,6 +102,10 @@ function Chapter1Quiz() {
             <br></br>
 
             {buttonsItems}
+            <br></br>
+            {show && isCorrect && <div className="answer_react">Great!<LuFlower2 size="1.5em" color="cornflowerblue"/></div>}
+            {show && !isCorrect && <div className="answer_react">Try Again!</div>}
+
             <br></br>
             <Button onClick={navigateToQuiz2}
                 color='primary'
