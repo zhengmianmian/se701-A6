@@ -9,6 +9,8 @@ import evolution_2 from '../assets/images/flowers/evolution2.png';
 
 const allImages = [seeds, plantedSeeds, quizz_1, quizz_2, quizz_3, quizz_4, evolution_1, evolution_2];
 
+// accidently spelt quiz wrong whoops - Thomas
+
 /*
 0 - Seeds
 1 - pot w/ planted seeds
