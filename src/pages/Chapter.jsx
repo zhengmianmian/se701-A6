@@ -2,7 +2,13 @@ import shape from '../assets/images/image-101.png'
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import ReactPlayer from "react-player";
+import { useNavigate} from 'react-router-dom';
+
 function Chapter(props) {
+    const navigate = useNavigate();
+    const navigateToQuiz = () => {
+        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz');
+    };
 
     return (
         <>
@@ -17,7 +23,7 @@ function Chapter(props) {
             </Card>
             <img src={shape} alt="shapes" />
             <div>
-                <Button>Chapter1 Quiz</Button>
+                <Button onClick={navigateToQuiz} variant="contained" color="primary">Chapter1 Quiz</Button>
                 <Button>Discussion</Button>
             </div>
         </>
