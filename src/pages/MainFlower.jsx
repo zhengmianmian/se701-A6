@@ -7,7 +7,19 @@ import quizz_4 from '../assets/images/flowers/4quizz.png';
 import evolution_1 from '../assets/images/flowers/evolution1.png';
 import evolution_2 from '../assets/images/flowers/evolution2.png';
 
-const allImages = [seeds, plantedSeeds, quizz_1, quizz_2, quizz_3, quizz_4, evolution_1, evolution_2];
+import React, {useState} from 'react';
+import Button from '@mui/material/Button';
+
+const allImages = [
+  seeds,
+  plantedSeeds,
+  quizz_1,
+  quizz_2,
+  quizz_3,
+  quizz_4,
+  evolution_1,
+  evolution_2
+];
 
 // accidently spelt quiz wrong whoops - Thomas
 
@@ -18,21 +30,27 @@ const allImages = [seeds, plantedSeeds, quizz_1, quizz_2, quizz_3, quizz_4, evol
 6 - yellow flower
 7 - purple flower
 */
-
 function MainFlower() {
-  // logic to determine the index of the flower to display
-  const indexToDisplay = 6;
-
-  return (
-    <div>
-      <h3>Your flower</h3>
-      <img
-        src={allImages[indexToDisplay]}
-        alt={`flower ${indexToDisplay + 1}`}
-        className="flower-image"
-      />
-    </div>
-  );
-}
+    const [indexToDisplay, setIndexToDisplay] = useState(1);
+  
+    const changeImage = () => {
+      // Increment the index by 1
+      setIndexToDisplay((prevIndex) => (prevIndex + 1) % allImages.length);
+    };
+  
+    return (
+      <div>
+        <h3>Your flower</h3>
+        <img
+          src={allImages[indexToDisplay]}
+          alt={`flower ${indexToDisplay + 1}`}
+          className="flower-image"
+        />
+        <Button onClick={changeImage} variant="contained" color="primary" style={{ marginLeft: '2px' }}>
+          Grow
+        </Button>
+      </div>
+    );
+  }
 
 export default MainFlower;
