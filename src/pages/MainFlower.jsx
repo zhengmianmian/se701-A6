@@ -9,9 +9,17 @@ import evolution_2 from '../assets/images/flowers/evolution2.png';
 
 const allImages = [seeds, plantedSeeds, quizz_1, quizz_2, quizz_3, quizz_4, evolution_1, evolution_2];
 
+/*
+0 - Seeds
+1 - pot w/ planted seeds
+2 till 5 quiz levels
+6 - yellow flower
+7 - purple flower
+*/
+
 function MainFlower() {
   // logic to determine the index of the flower to display
-  const indexToDisplay = 1;
+  const indexToDisplay = 6;
 
   return (
     <div>
