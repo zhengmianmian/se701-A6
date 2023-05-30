@@ -1,7 +1,7 @@
-import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import { Box, Button, Card, CardActions, CardContent, IconButton, Link, Popover, styled, TextField, Typography } from '@mui/material'
 import dayjs from 'dayjs';
 import React, { useState } from 'react'
+import { TbThumbUpFilled } from 'react-icons/tb';
 
 const Wrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
@@ -30,29 +30,14 @@ export default function PostCard(props) {
     const {
         post,
     } = props;
-
-    const [like, setLike] = React.useState(0)
+    const [like, setLike] = React.useState(1)
+    const [liked, setLiked] = React.useState(false)
     const [param, setParam] = React.useState({});
     const [value, setValue] = React.useState('');
     const [fold, setFold] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const [replys, setReplys] = useState(post.replys)
-
-    const addReply = (content) => {
-        let newReplys = replys
-        newReplys.push(
-            {
-                _id: 0,
-                user_id: 0,
-                user_name: 'Leon',
-                to_user_name: post.user_name,
-                comment: content,
-                updatedAt: new Date().getTime
-            }
-        )
-        setReplys(newReplys)
-    }
 
     const handleChange = (event) => {
         setValue(event.target.value);
@@ -76,11 +61,17 @@ export default function PostCard(props) {
     };
 
     const handleLike = () => {
-        let v = like
-        setLike(v++)
+        if (liked) {
+            let v = like - 1
+            setLike(v)
+        } else {
+            let v = like + 1
+            setLike(v)
+        }
+        setLiked(!liked)
     }
 
-    const handleSubmit = (event) => {
+    const addReply = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         let newReplys = replys
@@ -116,7 +107,7 @@ export default function PostCard(props) {
             }}
         >
             <ReplyWrapper>
-                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                <Box component="form" onSubmit={addReply} noValidate sx={{ mt: 1 }}>
                     <ReplyWrapper>
                         <TextField
                             label="Content"
@@ -158,7 +149,7 @@ export default function PostCard(props) {
                                 onClick={handleLike}
                                 edge="end"
                             >
-                                <ThumbUpOutlinedIcon fontSize="small" />
+                                {liked ? <TbThumbUpFilled fontSize="large" color='red' /> : <TbThumbUpFilled fontSize="large" color='gray' />}
                             </IconButton>
                             {like > 0 && <span
                                 style={{ lineHeight: '26px', display: 'inline-block', marginLeft: '12px' }}
@@ -177,7 +168,6 @@ export default function PostCard(props) {
                             aria-label="account of current user"
                             aria-controls={replyId}
                             aria-haspopup="true"
-                            // disabled={!isLogin}
                             onClick={(event) => {
                                 handleReplyOpen(event, {});
                             }}
