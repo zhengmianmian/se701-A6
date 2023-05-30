@@ -9,6 +9,10 @@ import ResourcesPage from "./pages/ResourcesPage";
 import GeometryPage from "./pages/GeometryPage";
 import TwoDShapePage from "./pages/TwoDShapePage";
 import Chapter from "./pages/Chapter";
+
+
+
+
 import MainFlower from "./pages/MainFlower";
 function App() {
 
