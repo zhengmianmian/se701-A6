@@ -20,18 +20,18 @@ import Reflections from "./pages/Reflections";
 function App() {
 
   return (
-    <div className="App">
-      <header>
-        <nav>
-          <Link className="link" to="/home" >HOME</Link>
-          <Link className="link" to="/learn" >LEARN</Link>
-          <Link className="link" to="/resources">RESOURCE</Link>
-          <Link className="link" to="/me">ME</Link>
-          <Link className="link" to="/reflections">REFLECTIONS</Link>
-          
-        </nav>
-      </header>
-          
+      <div className="App">
+        <header>
+          <nav>
+            <Link className="link" to="/home" >HOME</Link>
+            <Link className="link" to="/learn" >LEARN</Link>
+            <Link className="link" to="/resources">RESOURCE</Link>
+            <Link className="link" to="/me">ME</Link>
+
+
+          </nav>
+        </header>
+
         <main className="main">
           <div className="routes">
             <Routes>
