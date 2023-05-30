@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import Circle from '../assets/images/Circle.png'
-import Circle_inLife from '../assets/images/Circle_inLife.jpg'
+import Hexagon_inLife from '../assets/images/Hexagon_inLife.jpg'
 import Wateringcan3 from '../assets/images/Wateringcan3.jpg'
-import Wateringcan2 from '../assets/images/Wateringcan2.jpg'
+import Wateringcan4 from '../assets/images/Wateringcan4.jpg'
 import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
@@ -11,12 +10,12 @@ import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
 
 
-function Chapter1Quiz2() {
+function Chapter1Quiz3() {
 
     const navigate = useNavigate();
 
-    const navigateToQuiz3 = () => {
-        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3');
+    const navigateToQuiz4 = () => {
+        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3/chapter1quiz4');
     };
     const navigateToHint = () => {
         navigate('/hint', {state:{id:"chapter1quiz"}})
@@ -48,23 +47,23 @@ function Chapter1Quiz2() {
 
     const buttons=[
         {
-            name:'Rectangle',
+            name:'1',
             answer:'wrong'
         },
         {
-            name:'Square',
-            answer:'wrong'
-        },
-        {
-            name:'Triangle',
-            answer:'wrong'
-        },
-        {
-            name:'Circle',
+            name:'6',
             answer:'correct'
         },
         {
-            name:'Pentagon',
+            name:'3',
+            answer:'wrong'
+        },
+        {
+            name:'2',
+            answer:'wrong'
+        },
+        {
+            name:'5',
             answer:'wrong'
         },
 
@@ -109,23 +108,22 @@ function Chapter1Quiz2() {
                 <TbBulb size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <br></br>
-            <div className="quizQuestion">What shape is it?</div>
+            <div className="quizQuestion">How many sides does below shapes have?</div>
             <br></br>
-            {/*<img style={{width:170, height:170, alignSelf: 'center'}} src={Circle} alt="Circle" />*/}
-            <img style={{width:170, height:170, alignSelf: 'center'}} src={Circle_inLife} alt="Circle_inLife" />
-            {!water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan2} alt="wateringcan2"/>}
-            {water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan3} alt="wateringcan3"/>}
+            <img style={{width:170, height:170, alignSelf: 'center'}} src={Hexagon_inLife} alt="Hexagon_inLife" />
+            {!water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan3} alt="wateringcan3"/>}
+            {water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan4} alt="wateringcan4"/>}
             <br></br>
             {buttonsItems}
             <br></br>
             {show && isCorrect && <div className="answer_react">Great!<LuFlower2 size="1.5em" color="cornflowerblue"/></div>}
             {show && !isCorrect && <div className="answer_react">Try Again!</div>}
             <br></br>
-            <Button onClick={navigateToQuiz3}
+            <Button
                 color='primary'
                 style={{float: 'right'}}
                 size='small'>
-                Next Question
+                Finish quiz//Grow flower
             </Button>
 
 
@@ -133,4 +131,4 @@ function Chapter1Quiz2() {
     );
 }
 
-export default Chapter1Quiz2;
+export default Chapter1Quiz3;
