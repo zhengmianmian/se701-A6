@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes,Link } from "react-router-dom";
+import { Navigate, Route, Routes, Link } from "react-router-dom";
 import './App.css';
 import PageLayout from './pages/PageLayout'
 import HomePage from "./pages/HomePage";
@@ -9,6 +9,7 @@ import ResourcesPage from "./pages/ResourcesPage";
 import GeometryPage from "./pages/GeometryPage";
 import TwoDShapePage from "./pages/TwoDShapePage";
 import Chapter from "./pages/Chapter";
+import DiscussionPage from "./pages/DiscussionPage";
 function App() {
 
   return (
@@ -19,7 +20,7 @@ function App() {
           <Link className="link" to="/learn" >LEARN</Link>
           <Link className="link" to="/resources">RESOURCE</Link>
           <Link className="link" to="/me">ME</Link>
-          
+
         </nav>
       </header>
       <main className="main">
@@ -31,11 +32,12 @@ function App() {
               <Route path="level-test" element={<LevelTestPage />} />
               <Route path="learn" element={<LearnPage />} ></Route>
               <Route path="learn/geometry" element={<GeometryPage />} ></Route>
-              <Route path="learn/geometry/2d-shapes" element={<TwoDShapePage/>} >
-                <Route path="chapter1" element={<Chapter/>} ></Route>
+              <Route path="learn/geometry/2d-shapes" element={<TwoDShapePage />} >
+                <Route path="chapter1" element={<Chapter />} ></Route>
               </Route>
-              <Route path="resources" element={<ResourcesPage />}  />
-              <Route path="me" element={<AboutMePage/>} />
+              <Route path="resources" element={<ResourcesPage />} />
+              <Route path="me" element={<AboutMePage />} />
+              <Route path="discuss" element={<DiscussionPage />} />
             </Route>
           </Routes>
         </div>
