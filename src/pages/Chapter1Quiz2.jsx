@@ -5,11 +5,16 @@ import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
 import { LuFlower2 } from "react-icons/lu";
 import React, {useState} from 'react';
-
-
+import {useNavigate} from "react-router-dom";
 
 
 function Chapter1Quiz() {
+
+    const navigate = useNavigate();
+
+    const navigateToHint = () => {
+        navigate('/hint', {state:{id:"chapter1quiz"}})
+    };
   
     const ButtonGroup = styled.button`
     background: white;
@@ -83,11 +88,13 @@ function Chapter1Quiz() {
             <div className="quizHeader">Q2. Answer the following addition problem:</div>
            
             <ButtonHint
+                onClick={navigateToHint}
                 style={{float: 'right'}}>
                 Ask ChatGPT
                 <TbInputSearch size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <ButtonHint
+                onClick={navigateToHint}
                 style={{float: 'right'}}>
                 Hint
                 <TbBulb size="1.5em" color="cornflowerblue"/>

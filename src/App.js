@@ -13,6 +13,7 @@ import Chapter1Quiz from "./pages/Chapter1Quiz";
 import Chapter1Quiz2 from "./pages/Chapter1Quiz2";
 import MainFlower from "./pages/MainFlower";
 import DiscussionPage from "./pages/DiscussionPage";
+import HintPage from "./pages/HintPage";
 function App() {
 
   return (
@@ -43,6 +44,7 @@ function App() {
               <Route path="resources" element={<ResourcesPage />} />
               <Route path="me" element={<AboutMePage />} />
               <Route path="discuss" element={<DiscussionPage />} />
+              <Route path="hint" element={<HintPage />} />
             </Route>
           </Routes>
         </div>

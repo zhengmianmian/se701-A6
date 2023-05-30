@@ -16,6 +16,10 @@ function Chapter1Quiz() {
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2');
     };
 
+    const navigateToHint = () => {
+        navigate('/hint', {state:{id:"chapter1quiz"}})
+    };
+
     const ButtonGroup = styled.button`
     background: white;
     color: black;
@@ -86,11 +90,13 @@ function Chapter1Quiz() {
             <div className="quizHeader">Identify shapes Quiz</div>
             <div className="quizHeader">Q1. Answer the following addition problem:</div>
             <ButtonHint
+                onClick={navigateToHint}
                 style={{float: 'right'}}>
                 Ask ChatGPT
                 <TbInputSearch size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <ButtonHint
+                onClick={navigateToHint}
                 style={{float: 'right'}}>
                 Hint
                 <TbBulb size="1.5em" color="cornflowerblue"/>
