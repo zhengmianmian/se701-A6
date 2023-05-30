@@ -11,7 +11,7 @@ import TwoDShapePage from "./pages/TwoDShapePage";
 import Chapter from "./pages/Chapter";
 import Chapter1Quiz from "./pages/Chapter1Quiz";
 import Chapter1Quiz2 from "./pages/Chapter1Quiz2";
-
+import MainFlower from "./pages/MainFlower";
 import DiscussionPage from "./pages/DiscussionPage";
 function App() {
 
@@ -48,7 +48,7 @@ function App() {
         </div>
 
         <div className="flower">
-          <h3>Your flower</h3>
+          <MainFlower />
         </div>
       </main>
     </div>
