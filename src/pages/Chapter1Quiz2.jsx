@@ -5,12 +5,17 @@ import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
 import { LuFlower2 } from "react-icons/lu";
 import React, {useState} from 'react';
-
-
+import {useNavigate} from "react-router-dom";
 
 
 function Chapter1Quiz() {
-  
+
+    const navigate = useNavigate();
+
+    const navigateToHint = () => {
+        navigate('/hint', {state:{id:"chapter1quiz"}})
+    };
+
     const ButtonGroup = styled.button`
     background: white;
     color: black;
@@ -56,7 +61,7 @@ function Chapter1Quiz() {
             name:'Pentagon',
             answer:'wrong'
         },
-        
+
     ]
 
     const [isCorrect, setCorrect] = useState(null);
@@ -65,8 +70,8 @@ function Chapter1Quiz() {
 
     function IsCorrect(answer){
         if(answer === 'correct'){
-           setCorrect(true);
-           setShow(true);
+            setCorrect(true);
+            setShow(true);
         }else{
             setCorrect(false);
             setShow(true);
@@ -81,13 +86,15 @@ function Chapter1Quiz() {
         <>
             <div className="quizHeader">Identify shapes Quiz</div>
             <div className="quizHeader">Q2. Answer the following addition problem:</div>
-           
+
             <ButtonHint
+                onClick={navigateToHint}
                 style={{float: 'right'}}>
                 Ask ChatGPT
                 <TbInputSearch size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <ButtonHint
+                onClick={navigateToHint}
                 style={{float: 'right'}}>
                 Hint
                 <TbBulb size="1.5em" color="cornflowerblue"/>
@@ -103,14 +110,14 @@ function Chapter1Quiz() {
             {show && isCorrect && <div className="answer_react">Great!<LuFlower2 size="1.5em" color="cornflowerblue"/></div>}
             {show && !isCorrect && <div className="answer_react">Try Again!</div>}
             <br></br>
-            <Button 
+            <Button
                 color='primary'
                 style={{float: 'right'}}
                 size='small'>
                 Next Question
             </Button>
-        
-            
+
+
         </>
     );
 }
