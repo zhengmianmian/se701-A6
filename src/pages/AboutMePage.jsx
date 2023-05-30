@@ -41,23 +41,15 @@ const data = [
 function AboutMePage(props) {
     const {score, setScore} = useContext(AppContext)
     return (
-<<<<<<< Updated upstream
         <Container>
-=======
-      
-        <div>
->>>>>>> Stashed changes
+
             <Box py={2}>
                 <Typography variant="h3">Achievements</Typography>
                 <Typography variant="body1">Score: {score}</Typography>
             </Box>
-<<<<<<< Updated upstream
 
-            <Grid container spacing={40}>
-=======
             
             <Grid container spacing={2}>
->>>>>>> Stashed changes
                 <Grid item xs={12} md={6}>
                     <Box py={10}>
                         <Typography variant="h3">Skill Matrix</Typography>
@@ -92,13 +84,9 @@ function AboutMePage(props) {
                     </Box>
                 </Grid>
             </Grid>
-<<<<<<< Updated upstream
+
         </Container>
-=======
-           
-        </div>
-      
->>>>>>> Stashed changes
+
     );
 }
 

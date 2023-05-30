@@ -23,8 +23,8 @@ function Chapter(props) {
             </Card>
             <img src={shape} alt="shapes" />
             <div>
-                <Button onClick={navigateToQuiz} variant="contained" color="primary">Chapter1 Quiz</Button>
-                <Button>Discussion</Button>
+                <Button style={{margin:"10px"}} onClick={navigateToQuiz} variant="contained" color="primary">Chapter1 Quiz</Button>
+                <Button style={{margin:"10px"}} onClick={()=>{navigate('/discuss');}} variant="contained" color="primary">Discussion</Button>
             </div>
         </>
     );
