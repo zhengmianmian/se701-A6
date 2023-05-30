@@ -49,3 +49,8 @@
   width: 20%;
   border: 1px solid #61dafb;
 }
+
+.main .flower .flower-image {
+  width: 80%; 
+  height: auto; 
+}
