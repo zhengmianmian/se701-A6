@@ -11,6 +11,7 @@ import TwoDShapePage from "./pages/TwoDShapePage";
 import Chapter from "./pages/Chapter";
 import Chapter1Quiz from "./pages/Chapter1Quiz";
 import Chapter1Quiz2 from "./pages/Chapter1Quiz2";
+import Chapter1Quiz3 from "./pages/Chapter1Quiz3";
 import MainFlower from "./pages/MainFlower";
 import DiscussionPage from "./pages/DiscussionPage";
 import HintPage from "./pages/HintPage";
@@ -45,6 +46,8 @@ function App() {
                   <Route path="chapter1" element={<Chapter />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz" element={<Chapter1Quiz />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2" element={<Chapter1Quiz2 />} ></Route>
+                  <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3" element={<Chapter1Quiz3 />} ></Route>
+        
                 </Route>
                 <Route path="resources" element={<ResourcesPage />} />
                 <Route path="me" element={<AboutMePage />} />
