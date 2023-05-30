@@ -9,10 +9,8 @@ import ResourcesPage from "./pages/ResourcesPage";
 import GeometryPage from "./pages/GeometryPage";
 import TwoDShapePage from "./pages/TwoDShapePage";
 import Chapter from "./pages/Chapter";
-
-
-
-
+import Chapter1Quiz from "./pages/Chapter1Quiz";
+import Chapter1Quiz2 from "./pages/Chapter1Quiz2";
 import MainFlower from "./pages/MainFlower";
 function App() {
 
