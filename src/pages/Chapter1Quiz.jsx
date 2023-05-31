@@ -18,7 +18,10 @@ function Chapter1Quiz() {
     };
 
     const navigateToHint = () => {
-        navigate('/hint', {state:{id:"chapter1quiz"}})
+        if (window.$score > 0) {
+            window.$score = window.$score - 1
+            navigate('/hint', {state:{id:"chapter1quiz"}})
+        }
     };
 
     const ButtonGroup = styled.button`
@@ -72,12 +75,14 @@ function Chapter1Quiz() {
     const [isCorrect, setCorrect] = useState(null);
     const [show, setShow] = useState(false);
     const [water, fillWater] = useState(false);
+    let boolHints = true
 
     function IsCorrect(answer){
         if(answer === 'correct'){
             setCorrect(true);
             setShow(true);
             fillWater(true);
+            window.$score = window.$score + 1
         }else{
             setCorrect(false);
             setShow(true);

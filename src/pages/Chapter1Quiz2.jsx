@@ -19,7 +19,10 @@ function Chapter1Quiz2() {
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3');
     };
     const navigateToHint = () => {
-        navigate('/hint', {state:{id:"chapter1quiz"}})
+        if (window.$score > 0) {
+            window.$score = window.$score - 1
+            navigate('/hint', {state:{id:"chapter1quiz"}})
+        }
     };
 
     const ButtonGroup = styled.button`
@@ -77,6 +80,7 @@ function Chapter1Quiz2() {
 
     function IsCorrect(answer){
         if(answer === 'correct'){
+            window.$score = window.$score + 1
             setCorrect(true);
             setShow(true);
             fillWater(true);
