@@ -25,7 +25,7 @@
   transition: color 0.5s, background-color 0.5s;
 }
 .link:hover{
-  background-color: #3f8efc;
+  background-color: #61dafb;
   color: white;
 }
 
@@ -37,6 +37,12 @@
   justify-content: center;
   
 }
+
+.main .custom-button {
+  font-size: 24px;
+  padding: 30px 50px;
+}
+
 .main .routes {
   margin: 5px;
   min-height: var(--main-height);
