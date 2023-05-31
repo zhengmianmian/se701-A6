@@ -20,12 +20,12 @@ function GeometryPage() {
             path:'/learn/geometry'
         },
         {
-            name:'unit5',
+            name:'Unit test',
             path:'/learn/geometry'
         },
         {
-            name:'Quiz',
-            path:'/learn/geometry'
+            name:'Personal Test',
+            path:'/learn/geometry/personaltest'
         },
     ]
     
@@ -39,6 +39,7 @@ function GeometryPage() {
             <div className="btnContainer">
                 {unitItems}
             </div>
+
         </>
     );
 }
