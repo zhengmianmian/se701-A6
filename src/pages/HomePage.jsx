@@ -1,20 +1,26 @@
-import { useContext } from "react";
-import { AppContext } from "../AppContextProvider";
-import Button from '@mui/material/Button';
-import { useNavigate} from 'react-router-dom';
+import f1 from '../assets/images/home_flowers/f1.PNG'
+import f2 from '../assets/images/home_flowers/f2.PNG'
+import f3 from '../assets/images/home_flowers/f3.PNG'
+import f4 from '../assets/images/home_flowers/f4.PNG'
+import '../assets/css/HomePage.css'
+const flowers = [
+    f1,
+    f2,
+    f3,
+    f4
+]
 function HomePage() {
-    const navigate = useNavigate();
-    //const {hello, setHello} = useContext(AppContext)
-    const navigateToLevelTest = () => {
-        // navigate to /contacts
-        navigate('/level-test');
-    };
+    const flowerItems = flowers.map((item,index)=>
+        <div key={index}>
+            <h3>level {index+1} </h3>
+            <img src={item} alt="flower" />
+        </div>
+    );
     return (
         <div>
-            <h1>Math gardener</h1>
-            
-            <Button onClick={navigateToLevelTest} variant="contained" color="primary">Starting quiz</Button>
-            <p>A short quiz to determine your mathematical process.</p>
+            <div id='flower-container'>
+                {flowerItems}
+            </div>
         </div>
     );
 }
