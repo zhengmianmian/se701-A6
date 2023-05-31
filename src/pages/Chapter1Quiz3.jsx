@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 import Hexagon_inLife from '../assets/images/Hexagon_inLife.jpg'
-import Wateringcan3 from '../assets/images/Wateringcan3.jpg'
-import Wateringcan4 from '../assets/images/Wateringcan4.jpg'
 import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
@@ -14,9 +12,6 @@ function Chapter1Quiz3() {
 
     const navigate = useNavigate();
 
-    const navigateToQuiz4 = () => {
-        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3/chapter1quiz4');
-    };
     const navigateToHint = () => {
         if (window.$score > 0) {
             window.$score = window.$score - 1
@@ -81,12 +76,10 @@ function Chapter1Quiz3() {
         if(answer === 'correct'){
             setCorrect(true);
             setShow(true);
-            fillWater(true);
             window.$score = window.$score + 1
         }else{
             setCorrect(false);
             setShow(true);
-            fillWater(false);
         }
     }
 
@@ -97,7 +90,7 @@ function Chapter1Quiz3() {
     return (
         <>
             <div className="quizHeader">Identify shapes Quiz</div>
-            <div className="quizHeader">Q2. Answer the following addition problem:</div>
+            <div className="quizHeader">Q3. Answer the following addition problem:</div>
 
             <ButtonHint
                 onClick={navigateToHint}
@@ -115,8 +108,6 @@ function Chapter1Quiz3() {
             <div className="quizQuestion">How many sides does below shapes have?</div>
             <br></br>
             <img style={{width:170, height:170, alignSelf: 'center'}} src={Hexagon_inLife} alt="Hexagon_inLife" />
-            {!water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan3} alt="wateringcan3"/>}
-            {water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan4} alt="wateringcan4"/>}
             <br></br>
             {buttonsItems}
             <br></br>
