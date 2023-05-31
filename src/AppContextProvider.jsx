@@ -8,6 +8,7 @@ export function AppContextProvider({ children }) {
     const [hello, setHello] = useState('Hello world!');
     const [score, setScore] = useState(0);
 
+
     const [posts, setPosts] = useState([
         {
             postId: 0,
