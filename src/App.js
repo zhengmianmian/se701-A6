@@ -16,6 +16,8 @@ import MainFlower from "./pages/MainFlower";
 import DiscussionPage from "./pages/DiscussionPage";
 import HintPage from "./pages/HintPage";
 import Reflections from "./pages/Reflections";
+import PersonalUnitTest from "./pages/PersonalUnitTest";
+import PersonalResult from "./pages/PersonalResult";
 import StartPage from "./pages/StartPage";
 import Chapter4 from "./pages/two-d-shapes-chapters/Chapter4";
 import Chapter3 from "./pages/two-d-shapes-chapters/Chapter3";
@@ -55,8 +57,10 @@ function App() {
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz" element={<Chapter1Quiz />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2" element={<Chapter1Quiz2 />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3" element={<Chapter1Quiz3 />} ></Route>
-        
                 </Route>
+                <Route path="learn/geometry/unittest" element={<Chapter1Quiz />} />
+                <Route path="learn/geometry/personaltest/" element={<PersonalUnitTest/>} />
+                <Route path="learn/geometry/personaltest/result" element={<PersonalResult />} />
                 <Route path="resources" element={<ResourcesPage />} />
                 <Route path="me" element={<AboutMePage />} />
                 <Route path="reflections" element={<Reflections/>} />
