@@ -43,6 +43,7 @@ function App() {
                 <Route path="learn" element={<LearnPage />} ></Route>
                 <Route path="learn/geometry" element={<GeometryPage />} ></Route>
                 <Route path="learn/geometry/2d-shapes" element={<TwoDShapePage />} >
+                  <Route index element={<Navigate to="chapter1" replace />} />
                   <Route path="chapter1" element={<Chapter />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz" element={<Chapter1Quiz />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2" element={<Chapter1Quiz2 />} ></Route>
