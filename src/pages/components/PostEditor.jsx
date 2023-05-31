@@ -27,7 +27,7 @@ export default function PostEditor() {
             updatedAt: new Date(),
             replys: []
         }
-        let temp = [newPost, ...posts];
+        let temp = [...posts, newPost];
         setPosts(temp)
     }
 

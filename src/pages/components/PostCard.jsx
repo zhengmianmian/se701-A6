@@ -1,7 +1,11 @@
-import ThumbUpOutlinedIcon from '@mui/icons-material/ThumbUpOutlined';
 import { Box, Button, Card, CardActions, CardContent, IconButton, Link, Popover, styled, TextField, Typography } from '@mui/material'
 import dayjs from 'dayjs';
 import React, { useState } from 'react'
+import { useContext } from 'react';
+import { useEffect } from 'react';
+import { TbThumbUpFilled } from 'react-icons/tb';
+import { AppContext } from '../../AppContextProvider';
+import ReplyCard from './ReplyCard';
 
 const Wrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
@@ -31,28 +35,22 @@ export default function PostCard(props) {
         post,
     } = props;
 
-    const [like, setLike] = React.useState(0)
-    const [param, setParam] = React.useState({});
+    const { score, setScore } = useContext(AppContext)
+
+    const [like, setLike] = React.useState(1)
+    const [liked, setLiked] = React.useState(false)
+    const [param, setParam] = React.useState('');
     const [value, setValue] = React.useState('');
     const [fold, setFold] = React.useState(true);
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const [replys, setReplys] = useState(post.replys)
 
-    const addReply = (content) => {
-        let newReplys = replys
-        newReplys.push(
-            {
-                _id: 0,
-                user_id: 0,
-                user_name: 'Leon',
-                to_user_name: post.user_name,
-                comment: content,
-                updatedAt: new Date().getTime
-            }
-        )
-        setReplys(newReplys)
-    }
+    useEffect(() => {
+        let tempReplys = post.replys
+        setReplys(tempReplys)
+        setFold(true)
+    }, [post])
 
     const handleChange = (event) => {
         setValue(event.target.value);
@@ -65,8 +63,8 @@ export default function PostCard(props) {
         setFold(!fold);
     }
 
-    const handleReplyOpen = (event, data) => {
-        setParam(data);
+    const handleReplyOpen = (event, name) => {
+        setParam(name);
         setAnchorEl(event.currentTarget);
     };
 
@@ -76,27 +74,38 @@ export default function PostCard(props) {
     };
 
     const handleLike = () => {
-        let v = like
-        setLike(v++)
+        if (liked) {
+            let v = like - 1
+            setLike(v)
+        } else {
+            let v = like + 1
+            setLike(v)
+        }
+        setLiked(!liked)
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
+    const addReply = (content, name) => {
         let newReplys = replys
         newReplys.push(
             {
                 _id: 0,
                 user_id: 0,
                 user_name: 'Leon',
-                to_user_name: post.user_name,
-                comment: data.get('content'),
+                to_user_name: name,
+                comment: content,
                 updatedAt: new Date().getTime
             }
         )
         setAnchorEl(null);
         setValue('');
+        setScore(score + 1)
         setReplys(newReplys)
+    }
+
+    const handleAddReply = (event) => {
+        event.preventDefault();
+        const content = new FormData(event.currentTarget).get('content');
+        addReply(content, param)
     };
 
     var replyId = isReplyOpen ? 'primary-search-account-reply' : undefined;
@@ -116,7 +125,7 @@ export default function PostCard(props) {
             }}
         >
             <ReplyWrapper>
-                <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                <Box component="form" onSubmit={handleAddReply} noValidate sx={{ mt: 1 }}>
                     <ReplyWrapper>
                         <TextField
                             label="Content"
@@ -158,7 +167,7 @@ export default function PostCard(props) {
                                 onClick={handleLike}
                                 edge="end"
                             >
-                                <ThumbUpOutlinedIcon fontSize="small" />
+                                {liked ? <TbThumbUpFilled fontSize="large" color='red' /> : <TbThumbUpFilled fontSize="large" color='gray' />}
                             </IconButton>
                             {like > 0 && <span
                                 style={{ lineHeight: '26px', display: 'inline-block', marginLeft: '12px' }}
@@ -177,9 +186,8 @@ export default function PostCard(props) {
                             aria-label="account of current user"
                             aria-controls={replyId}
                             aria-haspopup="true"
-                            // disabled={!isLogin}
                             onClick={(event) => {
-                                handleReplyOpen(event, {});
+                                handleReplyOpen(event, post.user_name);
                             }}
                         >
                             Reply
@@ -207,41 +215,7 @@ export default function PostCard(props) {
                         paddingBottom: 0,
                     }}
                 >
-                    {replys.map((item, index) => {
-                        return (
-                            <div key={index}>
-                                <CardContent sx={{ flexGrow: 1 }} style={{ paddingTop: '0', paddingBottom: '0' }}>
-                                    <Typography gutterBottom component="div" style={{ fontSize: '14px' }}>
-                                        <Link>{item.user_name}</Link>
-                                        <span> replied </span>
-                                        <Link>{item.to_user_name}</Link>:
-                                    </Typography>
-                                    <Typography style={{ fontSize: '14px' }}>
-                                        {item.comment}
-                                    </Typography>
-                                </CardContent>
-                                <CardActions style={{ flexDirection: 'row-reverse', alignItems: 'baseline' }}>
-                                    <Button
-                                        size="small"
-                                        aria-label="account of current user"
-                                        aria-controls={replyId}
-                                        aria-haspopup="true"
-                                        onClick={(event) => {
-                                            handleReplyOpen(event, {
-                                                replied_id: item._id,
-                                                to_user_id: item.user_id,
-                                                to_user_name: item.user_name,
-                                            });
-                                        }}
-                                    >
-                                        Reply
-                                    </Button>
-                                    <DateWrapper>
-                                        {dayjs(item.updatedAt).format('HH:mm:ss DD/MM/YYYY')}
-                                    </DateWrapper>
-                                </CardActions>
-                            </div>)
-                    })}
+                    {replys.map((item, index) => <ReplyCard key={index} reply={item} replyId={replyId} handleReplyOpen={handleReplyOpen} />)}
                 </CommentsWrapper>
             </Card>
             {renderReply}

@@ -4,9 +4,9 @@ import Pagination from '@mui/material/Pagination';
 import React from "react";
 import PostCard from "./components/PostCard";
 import PostEditor from "./components/PostEditor";
-import { useEffect } from "react";
 import { useContext } from "react";
 import { AppContext } from "../AppContextProvider";
+import { useEffect } from "react";
 import { useState } from "react";
 
 
@@ -36,18 +36,24 @@ export default function DiscussionPage(props) {
     const { posts, setPosts } = useContext(AppContext)
     const [page, setPage] = React.useState(1)
     const [count, setCount] = React.useState(0)
-    // const [postList, setPostList] = useState(posts)
+    const [postList, setPostList] = useState([])
+
+    useEffect(() => {
+        let tempPostList = [...posts]
+        tempPostList.reverse()
+        setPostList(tempPostList)
+    }, [posts])
 
     return (
         <Box style={{ width: '100%', margin: '20px 3px' }}>
             <Wrapper>
                 <Stack spacing={3}>
                     {
-                        posts.map((item, index) => {
+                        postList.map((item, index) => {
                             return (<PostCard key={index} post={item} />)
                         })
                     }
-                    {posts.length < 1 && <EmptyWrapper>Nothing here~</EmptyWrapper>}
+                    {postList.length < 1 && <EmptyWrapper>Nothing here~</EmptyWrapper>}
                 </Stack>
             </Wrapper>
             <Pagination
