@@ -40,7 +40,9 @@
 
 .main .custom-button {
   font-size: 24px;
-  padding: 30px 50px;
+  padding: 100px 200px;
+  color: white;
+  background-color: #3f8efc;
 }
 
 .main .routes {

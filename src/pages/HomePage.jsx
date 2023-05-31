@@ -11,7 +11,7 @@ function HomePage() {
     };
     return (
         <div>
-            <h1 style={{ fontSize: '64px', color: 'black', textAlign: 'left'}}>Math Gardener.</h1>
+            <h1 style={{ fontSize: '64px', color: 'black'}}>Math Gardener.</h1>
             
             <Button onClick={navigateToLevelTest} variant="contained" color="primary" className = "custom-button">Starting quiz</Button>
             <p>A short quiz to determine your mathematical process.</p>
