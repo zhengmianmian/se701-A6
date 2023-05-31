@@ -6,17 +6,23 @@ import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
 import { LuFlower2 } from "react-icons/lu";
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import {AppContext} from "../AppContextProvider";
 
 
 function Chapter1Quiz3() {
 
     const navigate = useNavigate();
+    const { score, setScore } = useContext(AppContext)
 
     const navigateToQuiz4 = () => {
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3/chapter1quiz4');
     };
+    const navigateToChapters = () => {
+        setScore(score + 8)
+        navigate('/learn/geometry/2d-shapes')
+    }
     const navigateToHint = () => {
         if (window.$score > 0) {
             window.$score = window.$score - 1
@@ -126,7 +132,8 @@ function Chapter1Quiz3() {
             <Button
                 color='primary'
                 style={{float: 'right'}}
-                size='small'>
+                size='small'
+                onClick={navigateToChapters}>
                 Finish quiz//Grow flower
             </Button>
 
