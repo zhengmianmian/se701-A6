@@ -5,7 +5,7 @@
   --main-height : 90vh;
 }
 .App header {
-  background-color: #282c34;
+  background-color: #3f8efc;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -21,11 +21,11 @@
   border-radius: 5px;
   text-decoration: none;
   font-size: 20px;
-  color: #61dafb;
+  color: white;
   transition: color 0.5s, background-color 0.5s;
 }
 .link:hover{
-  background-color: #61dafb;
+  background-color: #3f8efc;
   color: white;
 }
 
