@@ -11,49 +11,51 @@ export function AppContextProvider({ children }) {
     const [posts, setPosts] = useState([
         {
             postId: 0,
-            user_name: 'post name 0',
-            content: 'post content 0',
-            updatedAt: new Date('2023-05-01T12:03:00'),
+            user_name: 'Mianmian',
+            content: 'Does an ellipse have a center?',
+            updatedAt: new Date('2023-05-26T12:03:00'),
             replys: [
                 {
+                    postId: 0,
                     replyid: 0,
-                    user_name: 'reply name 0-0',
-                    to_user_name: 'post name 0',
-                    comment: 'reply 0-0',
-                    updatedAt: new Date('2023-05-01T12:03:00')
+                    user_name: 'Bill',
+                    to_user_name: 'Mianmian',
+                    comment: 'An ellipse has two foci, not a single center.',
+                    updatedAt: new Date('2023-05-27T13:05:00')
                 },
-                {
-                    replyid: 1,
-                    user_name: 'reply name 0-1',
-                    to_user_name: 'post name 1',
-                    comment: 'reply 0-1',
-                    updatedAt: new Date('2023-05-01T12:03:00')
-                }
             ]
         },
         {
             postId: 1,
-            user_name: 'post name 1',
-            content: 'post content 1',
-            updatedAt: new Date('2023-05-01T12:03:00'),
+            user_name: 'Thomas',
+            content: 'If I connect the vertices of all polygons, will it definitely become multiple small triangles?',
+            updatedAt: new Date('2023-05-28T12:03:00'),
             replys: [
                 {
+                    postId: 1,
                     replyid: 0,
-                    user_name: 'reply name 1-0',
-                    to_user_name: 'post name 1',
-                    comment: 'reply 1-0',
-                    updatedAt: new Date('2023-05-01T12:03:00')
+                    user_name: 'Keo',
+                    to_user_name: 'Thomas',
+                    comment: 'Not all polygons can be made into multiple small triangles by connecting vertices. It depends on the shape of the polygon and how the vertices are connected.',
+                    updatedAt: new Date('2023-05-29T10:06:00')
                 },
                 {
+                    postId: 1,
                     replyid: 1,
-                    user_name: 'reply name 1-1',
-                    to_user_name: 'post name 1',
-                    comment: 'reply 1-1',
-                    updatedAt: new Date('2023-05-01T12:03:00')
+                    user_name: 'Yugyeong',
+                    to_user_name: 'Thomas',
+                    comment: 'Any convex polygon can form a triangle by connecting its vertices, because the interior of a convex polygon contains no other vertices. All we have seen so far are polygons of this kind.',
+                    updatedAt: new Date('2023-05-29T12:13:00')
                 }
             ]
         }
     ])
+
+    const setReplys = (reply) => {
+        let newPosts = [...posts]
+        newPosts = newPosts[reply.postId].replys.push(reply)
+        setPosts(newPosts)
+    }
 
     const context = {
         hello,
@@ -61,7 +63,8 @@ export function AppContextProvider({ children }) {
         score,
         setScore,
         posts,
-        setPosts
+        setPosts,
+        setReplys,
     }
 
     return (
