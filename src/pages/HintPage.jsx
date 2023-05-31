@@ -9,9 +9,12 @@ function HintPage(props) {
         "geometry2": 'Question2'
     }
 
+    const score = window.$score
+
+
     return (
         <div className="container">
-            <h1 className="title" style={{textAlign:"left", marginLeft: '5%', fontSize: '49px'}}>Math Gardener</h1>
+            <h1 className="title" style={{textAlign:"left", marginLeft: '5%', fontSize: '49px'}}>Math Gardener  Remaining Hints:{score}</h1>
             <div className="content" >
                 <p className="subtitle" style={{ color: '#38b6ff', textAlign: 'left', marginLeft: '7%', fontSize: '25px'}}>Hint:</p>
                 <ul style={{ textAlign: 'left', marginLeft: '5%', marginTop: '1%'}}> Here's a hint to your question:<br />
@@ -29,7 +32,7 @@ function HintPage(props) {
                     <ul style={{textAlign: 'left', marginTop: '1%'}}>You can ask ChatGPT the following questions and try to answer the question by yourself:<br />
                         <br />
                         <li style={{marginLeft: "5%"}}>{dict[location.state.id][5]}<br /></li>
-                        <li style={{marginLeft: "5%"}}>{dict[location.state.id][5]}<br /></li>
+                        <li style={{marginLeft: "5%"}}>{dict[location.state.id][6]}<br /></li>
                     </ul>
                 </div>
             </div>
