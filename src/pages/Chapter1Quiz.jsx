@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
-import triangle from '../assets/images/Triangle.png'
 import Triangle_inLife from '../assets/images/Triangle_inLife.jpg'
-import Wateringcan0 from '../assets/images/Wateringcan0.jpg'
-import Wateringcan2 from '../assets/images/Wateringcan2.jpg'
 import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { useNavigate} from 'react-router-dom';
@@ -74,19 +71,16 @@ function Chapter1Quiz() {
 
     const [isCorrect, setCorrect] = useState(null);
     const [show, setShow] = useState(false);
-    const [water, fillWater] = useState(false);
     let boolHints = true
 
     function IsCorrect(answer){
         if(answer === 'correct'){
             setCorrect(true);
             setShow(true);
-            fillWater(true);
             window.$score = window.$score + 1
         }else{
             setCorrect(false);
             setShow(true);
-            fillWater(false);
         }
     }
 
@@ -115,8 +109,6 @@ function Chapter1Quiz() {
             <br></br>
             {/*<img style={{width:170, height:170, alignSelf: 'left'}} src={triangle} alt="triangle" />*/}
             <img style={{width:170, height:170, alignSelf: 'center'}} src={Triangle_inLife} alt="Triangle_inLife" />
-            {!water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan0} alt="wateringcan0"/>}
-            {water && <img style={{width:120, height:120, float: 'right'}} src={Wateringcan2} alt="wateringcan2"/>}
             <br></br>
             {buttonsItems}
             <br></br>
