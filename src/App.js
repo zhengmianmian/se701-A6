@@ -28,7 +28,7 @@ function App() {
             <Link className="link" to="/learn" >LEARN</Link>
             <Link className="link" to="/resources">RESOURCE</Link>
             <Link className="link" to="/me">ME</Link>
-
+            <Link className="link" to="/reflections">REFLECTIONS</Link>
 
           </nav>
         </header>
