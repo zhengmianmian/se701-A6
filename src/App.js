@@ -16,6 +16,7 @@ import MainFlower from "./pages/MainFlower";
 import DiscussionPage from "./pages/DiscussionPage";
 import HintPage from "./pages/HintPage";
 import Reflections from "./pages/Reflections";
+import StartPage from "./pages/StartPage";
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
           <div className="routes">
             <Routes>
               <Route path="/" element={<PageLayout />} >
-                <Route index element={<Navigate to="home" replace />} />
+                <Route index element={<StartPage/>} />
                 <Route path="home" element={<HomePage />} />
                 <Route path="level-test" element={<LevelTestPage />} />
                 <Route path="learn" element={<LearnPage />} ></Route>
