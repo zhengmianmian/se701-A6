@@ -18,6 +18,11 @@ import HintPage from "./pages/HintPage";
 import Reflections from "./pages/Reflections";
 import PersonalUnitTest from "./pages/PersonalUnitTest";
 import PersonalResult from "./pages/PersonalResult";
+import StartPage from "./pages/StartPage";
+import Chapter4 from "./pages/two-d-shapes-chapters/Chapter4";
+import Chapter3 from "./pages/two-d-shapes-chapters/Chapter3";
+import Chapter2 from "./pages/two-d-shapes-chapters/Chapter2";
+
 
 function App() {
 
@@ -38,7 +43,7 @@ function App() {
           <div className="routes">
             <Routes>
               <Route path="/" element={<PageLayout />} >
-                <Route index element={<Navigate to="home" replace />} />
+                <Route index element={<StartPage/>} />
                 <Route path="home" element={<HomePage />} />
                 <Route path="level-test" element={<LevelTestPage />} />
                 <Route path="learn" element={<LearnPage />} ></Route>
@@ -46,6 +51,9 @@ function App() {
                 <Route path="learn/geometry/2d-shapes" element={<TwoDShapePage />} >
                   <Route index element={<Navigate to="chapter1" replace />} />
                   <Route path="chapter1" element={<Chapter />} ></Route>
+                  <Route path="chapter2" element={<Chapter2 />} ></Route>
+                  <Route path="chapter3" element={<Chapter3 />} ></Route>
+                  <Route path="chapter4" element={<Chapter4 />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz" element={<Chapter1Quiz />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2" element={<Chapter1Quiz2 />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3" element={<Chapter1Quiz3 />} ></Route>

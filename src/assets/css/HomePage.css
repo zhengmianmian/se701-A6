@@ -1,0 +1,11 @@
+#flower-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    min-height: 550px;
+}
+
+#flower-container div{
+    margin: 30px;
+}

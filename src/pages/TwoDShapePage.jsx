@@ -12,17 +12,17 @@ function TwoDShapePage(props) {
         },
         {
             name: 'chapter2',
-            path: '/learn/geometry/2d-shapes',
+            path: '/learn/geometry/2d-shapes/chapter2',
             describe: 'Sides and Angles'
         },
         {
             name: 'chapter3',
-            path: '/learn/geometry/2d-shapes',
+            path: '/learn/geometry/2d-shapes/chapter3',
             describe: 'Some stuff about Geometry'
         },
         {
             name: 'chapter4',
-            path: '/learn/geometry/2d-shapes',
+            path: '/learn/geometry/2d-shapes/chapter4',
             describe: 'Some stuff about Geometry'
         }
     ]

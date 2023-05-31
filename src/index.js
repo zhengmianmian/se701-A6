@@ -5,6 +5,7 @@ import App from './App';
 import { AppContextProvider } from './AppContextProvider';
 import { BrowserRouter } from 'react-router-dom'
 const root = ReactDOM.createRoot(document.getElementById('root'));
+window.$score = 0;
 root.render(
   <React.StrictMode>
     <AppContextProvider>
