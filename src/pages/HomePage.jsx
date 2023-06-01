@@ -73,35 +73,33 @@ function HomePage() {
                 alignItems: 'center',
                 height: '100vh',
             }}>
-                <div>
-                    <Grid item xs={6}>
-                        <Box>
-                            <RadarChart
-                                width={700}
-                                height={500}
-                                data={data}
-                            >
-                                <PolarGrid />
-                                <PolarAngleAxis dataKey="subject" />
-                                <PolarRadiusAxis />
-                                <Radar
-                                    name="Mike"
-                                    dataKey="A"
-                                    stroke="#8884d8"
-                                    fill="#8884d8"
-                                    fillOpacity={0.6}
-                                />
-                            </RadarChart>
-                        </Box>
-                    </Grid>
-                </div>
                 <Grid item xs={6}>
-                    <Grid container spacing={2}>
-                        {flowerItems}
-                    </Grid>
+                <Grid container spacing={2}>
+                    {flowerItems}
+                </Grid>
+                </Grid>
+                <Grid item xs={6}>
+                <Box>
+                    <RadarChart
+                    width={700}
+                    height={500}
+                    data={data}
+                    >
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="subject" />
+                    <PolarRadiusAxis />
+                    <Radar
+                        name="Mike"
+                        dataKey="A"
+                        stroke="#8884d8"
+                        fill="#8884d8"
+                        fillOpacity={0.6}
+                    />
+                    </RadarChart>
+                </Box>
                 </Grid>
             </Grid>
-        </Container>
+            </Container>
 
     );
 }
