@@ -9,7 +9,7 @@ html, body {
   flex-direction: column;
   min-height: 100vh;
   text-align: center;
-  overflow: hidden;
+  overflow: auto;
 }
 :root {
   --main-height : 90vh;
@@ -66,19 +66,22 @@ html, body {
 }
 .main .flower {
   margin: 5px;
-  min-height: var(--main-height);
-  width: 20%;
-  
+  position: absolute;
+  bottom: 35px;
+  right: -90px;
+  width: 25%;
+  height: auto;
+  z-index: 1;
 }
 
 .main .flower .flower-image {
-  width: 80%; 
+  width: 90%; 
   height: auto; 
 }
 
 .footer {
   background-color: #3f8efc;
-  color: white;
+  color: #3f8efc;
   padding: 10px;
   position: fixed;
   text-align: center;
