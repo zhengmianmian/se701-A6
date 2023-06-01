@@ -11,22 +11,28 @@ function Chapter(props) {
     };
 
     return (
-        <div >
-            <h1>Chapter1-Identify shapes</h1>
-            <Card style={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
-                <ReactPlayer
-                    url="https://youtu.be/Q93bTbCNZpI?t=204"
-                    controls
-                    width="400px"
-                    height="300px"
-                />
+        <div>
+        <h1>Chapter 1 - Identify shapes</h1>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Card style={{ padding: '10px' }}>
+            <ReactPlayer
+                url="https://youtu.be/Q93bTbCNZpI?t=204"
+                controls
+                width="400px"
+                height="300px"
+            />
             </Card>
-            <img src={shape} alt="shapes" />
-            <div>
-                <Button style={{margin:"10px"}} onClick={navigateToQuiz} variant="contained" color="primary">Chapter 1 Quiz</Button>
-                <Button style={{margin:"10px"}} onClick={()=>{navigate('/discuss');}} variant="contained" color="primary">Discussion</Button>
-            </div>
+            <img src={shape} alt="shapes" style={{ marginLeft: '20px' }} />
         </div>
+        <div>
+            <Button style={{ margin: '10px' }} onClick={navigateToQuiz} variant="contained" color="primary">
+            Chapter 1 Quiz
+            </Button>
+            <Button style={{ margin: '10px' }} onClick={() => { navigate('/discuss'); }} variant="contained" color="primary">
+            Discussion
+            </Button>
+      </div>
+    </div>
     );
 }
 

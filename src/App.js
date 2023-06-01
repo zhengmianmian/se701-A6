@@ -1,4 +1,5 @@
-import { Navigate, Route, Routes, Link } from "react-router-dom";
+import { Navigate, Route, Routes, Link, useLocation} from "react-router-dom";
+import { useEffect, useState } from "react";
 import './App.css';
 import PageLayout from './pages/PageLayout'
 import HomePage from "./pages/HomePage";
@@ -28,19 +29,24 @@ import Chapter2Quiz3 from "./pages/chapter2quizes/Chapter2Quiz3";
 
 
 function App() {
+  const location = useLocation();
+  const isExtraWordsVisible = location.pathname !== '/' && location.pathname !== '/home';
 
   return (
-      <div className="App">
-        <header>
-          <nav>
-            <Link className="link" to="/home" >HOME</Link>
-            <Link className="link" to="/learn" >LEARN</Link>
-            <Link className="link" to="/resources">RESOURCE</Link>
-            <Link className="link" to="/me">ME</Link>
-            <Link className="link" to="/reflections">REFLECTIONS</Link>
-
-          </nav>
-        </header>
+    <div className="App">
+      
+      <header>
+        {isExtraWordsVisible && (
+          <h1 className="site-name">Math Gardener.</h1>
+        )}
+        <nav className="header-right">
+          <Link className="link" to="/home">HOME</Link>
+          <Link className="link" to="/learn">LEARN</Link>
+          <Link className="link" to="/resources">RESOURCE</Link>
+          <Link className="link" to="/me">ME</Link>
+          <Link className="link" to="/reflections">REFLECTIONS</Link>
+        </nav>
+      </header>
 
         <main className="main">
           <div className="routes">
@@ -80,7 +86,11 @@ function App() {
             <MainFlower />
           </div>
         </main>
-      </div>
+
+        <footer className="footer">
+        <p> -</p>
+      </footer>
+    </div>
   );
 }
 

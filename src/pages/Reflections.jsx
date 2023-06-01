@@ -26,8 +26,8 @@ function ReflectionsPage(props) {
   };
 
   return (
-    <div>
-      <h1>Here are your past reflections</h1>
+    <div style={{ marginLeft: '-100px', marginRight: '175px'}}>
+      <h1>Write a reflection:</h1>
 
       <textarea
         value={inputValue}
