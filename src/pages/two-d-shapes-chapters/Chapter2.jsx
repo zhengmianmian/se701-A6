@@ -6,6 +6,9 @@ import perimeterLearn from '../../assets/images/Geometry/PerimeterLearn.jpg'
 
 function Chapter2(props) {
     const navigate = useNavigate();
+    const navigateToQuiz = () => {
+        navigate('/learn/geometry/2d-shapes/chapter2/chapter2quiz');
+    };
     return (
         <div>
             <h1>Chapter 2 - Sides and Angles</h1>
@@ -32,7 +35,7 @@ function Chapter2(props) {
                 </Card>
             </div>
       <div>
-        <Button style={{ margin: '10px' }} variant="contained" color="primary">
+        <Button onClick={navigateToQuiz} style={{ margin: '10px' }} variant="contained" color="primary">
           Chapter 2 Quiz
         </Button>
         <Button

@@ -75,6 +75,7 @@ function MainFlower() {
   };
   const totalScore = score - canScore
 
+
   return (
     <div>
       
