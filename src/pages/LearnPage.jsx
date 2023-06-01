@@ -54,7 +54,7 @@ function LearnPage(props) {
                 </Grid>
                 <Grid item xs={12} md={6}>
                 <Box my={2}>
-                    <Card style={{width:'800px' }}>
+                    <Card style={{width:'800px', marginTop: '100px' }}>
                     <CardMedia 
                         component="img"
                         alt="Contemplative Reptile"

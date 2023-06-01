@@ -76,11 +76,12 @@ function LevelTest(props) {
         }}
       >
         Your accuracy：{score} %
-      </div>
-      <form ref={formRef}>
+      </div >
+      <div style={{ height: '600px', overflow: 'auto', width: '1350px'}}>
+      <form ref={formRef} style={{ width: '1300px'}}>
         {list.map((item, index) => {
           return (
-            <Card style={{ marginTop: "15px" }} key={index}>
+            <Card style={{ marginTop: "15px"}} key={index}>
               <h3>{item.label}</h3>
               <img style={{ width: "300px" }} src={item.img} />
               <RadioGroup
@@ -147,6 +148,7 @@ function LevelTest(props) {
           );
         })}
       </form>
+      </div>
       <Dialog
         open={open}
         keepMounted
