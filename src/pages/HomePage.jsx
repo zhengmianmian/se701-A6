@@ -51,9 +51,9 @@ const data = [
 function HomePage() {
     const flowerItems = flowers.map((item, index) =>
         <Grid item xs={3} key={index}>
-            <Box component="div" m={1} boxShadow={1} p={1} borderRadius={1}>
-                <Typography variant="h6" align="center">level {index + 1}</Typography>
-                <Card sx={{ width: '100%', height: 0, paddingBottom: '200%', position: 'relative', overflow: 'hidden' }}>
+            <Box component="div" m={1} boxShadow={0} p={1} borderRadius={1} sx={{ width: '100%', height: '400px' }}>
+                <Typography variant="h6" align="center"style={{ lineHeight: '8' }}>level {index + 1}</Typography>
+                <Card sx={{ width: '100%', height: 0, paddingBottom: '200%', position: 'relative', overflow: 'hidden', boxShadow: 'none' }}>
                     <CardMedia
                         component="img"
                         image={item}
@@ -73,15 +73,15 @@ function HomePage() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginTop: '-120px',
+                marginTop: '-180px',
                 height: '1vh',
             }}>
-                <Grid item xs={6}>
+                <Grid item xs={6} style={{ marginTop: '160px', marginLeft: "-130px" }}>
                 <Grid container spacing={2}>
                     {flowerItems}
                 </Grid>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={6} style={{ marginTop: '-100px' , marginLeft: "130px"}}>
                 <Box>
                     <RadarChart
                     width={700}
