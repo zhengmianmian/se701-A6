@@ -1,7 +1,7 @@
-import f1 from '../assets/images/home_flowers/f1.PNG'
-import f2 from '../assets/images/home_flowers/f2.PNG'
-import f3 from '../assets/images/home_flowers/f3.PNG'
-import f4 from '../assets/images/home_flowers/f4.PNG'
+import f1 from '../assets/images/home_flowers/f1.png'
+import f2 from '../assets/images/home_flowers/f2.png'
+import f3 from '../assets/images/home_flowers/f3.png'
+import f4 from '../assets/images/home_flowers/f4.png'
 import '../assets/css/HomePage.css'
 import { Container, Box, Grid, Typography } from '@mui/material';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, } from 'recharts';
@@ -76,7 +76,7 @@ function HomePage() {
                 marginTop: '-180px',
                 height: '1vh',
             }}>
-                <Grid item xs={6} style={{ marginTop: '160px', marginLeft: "-130px" }}>
+                <Grid item xs={6} style={{ marginTop: '190px', marginLeft: "-130px" }}>
                 <Grid container spacing={2}>
                     {flowerItems}
                 </Grid>
