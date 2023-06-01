@@ -2,12 +2,12 @@ import Button from '@mui/material/Button';
 import { useNavigate} from 'react-router-dom';
 import Card from '@mui/material/Card';
 import ReactPlayer from "react-player";
-import learn from '../../assets/images/Geometry/PerimeterLearn.jpg'
+import perimeterLearn from '../../assets/images/Geometry/PerimeterLearn.jpg'
 
 function Chapter2(props) {
     const navigate = useNavigate();
     return (
-        <div>
+        <div style={{height:"600px", overflow:"scroll" }}>
             <h1>Chapter 2 - Sides and Angles</h1>
             <div>
                 <p>A perimeter is the total length around the outside of the shape</p>
@@ -21,12 +21,12 @@ function Chapter2(props) {
                 />
             </Card>
             <Card style={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
-            <img src={learn} alt="shapes" 
+            <img src={perimeterLearn} alt="shapes" 
                 style={{width:"50%", height:"auto"}}
                 />
             </Card>
             <div>
-                <Button style={{margin:"10px"}}  variant="contained" color="primary">Chapter2 Quiz</Button>
+                <Button style={{margin:"10px"}}  variant="contained" color="primary">Chapter 2 Quiz</Button>
                 <Button style={{margin:"10px"}} onClick={()=>{navigate('/discuss');}} variant="contained" color="primary">Discussion</Button>
             </div>
         </div>

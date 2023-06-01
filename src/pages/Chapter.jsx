@@ -11,7 +11,7 @@ function Chapter(props) {
     };
 
     return (
-        <div style={{ margin:"20px", width:"950px", height:"450px", overflow:"scroll" }}>
+        <div style={{height:"600px", overflow:"scroll" }}>
             <h1>Chapter1-Identify shapes</h1>
             <Card style={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
                 <ReactPlayer
@@ -23,7 +23,7 @@ function Chapter(props) {
             </Card>
             <img src={shape} alt="shapes" />
             <div>
-                <Button style={{margin:"10px"}} onClick={navigateToQuiz} variant="contained" color="primary">Chapter1 Quiz</Button>
+                <Button style={{margin:"10px"}} onClick={navigateToQuiz} variant="contained" color="primary">Chapter 1 Quiz</Button>
                 <Button style={{margin:"10px"}} onClick={()=>{navigate('/discuss');}} variant="contained" color="primary">Discussion</Button>
             </div>
         </div>
