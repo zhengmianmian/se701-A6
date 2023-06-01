@@ -51,11 +51,13 @@ html, body {
   
 }
 
-.main .custom-button {
+.custom-button {
   font-size: 24px;
-  padding: 100px 200px;
+  padding: 50px 100px;
   color: white;
   background-color: #3f8efc;
+  border: none;
+  border-radius: 10px;
 }
 
 .main .routes {
