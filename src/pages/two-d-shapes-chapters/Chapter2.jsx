@@ -26,6 +26,13 @@ function Chapter2(props) {
                 />
             </Card>
             <div>
+                <h2>Key Ideas</h2>
+                <p>Perimeter is the total length of the outside of a shape</p>
+                <p>Perimeter of a square: Side + Side + Side + Side</p>
+                <p></p>
+                
+            </div>
+            <div>
                 <Button style={{margin:"10px"}}  variant="contained" color="primary">Chapter 2 Quiz</Button>
                 <Button style={{margin:"10px"}} onClick={()=>{navigate('/discuss');}} variant="contained" color="primary">Discussion</Button>
             </div>
