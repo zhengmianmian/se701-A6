@@ -31,7 +31,7 @@ function Chapter3(props) {
                 
             </div>
             <div>
-                <Button style={{margin:"10px"}}  variant="contained" color="primary">Chapter 2 Quiz</Button>
+                <Button style={{margin:"10px"}}  variant="contained" color="primary">Chapter 3 Quiz</Button>
                 <Button style={{margin:"10px"}} onClick={()=>{navigate('/discuss');}} variant="contained" color="primary">Discussion</Button>
             </div>
         </div>
