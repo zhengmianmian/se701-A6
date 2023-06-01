@@ -123,17 +123,17 @@ function LevelTest(props) {
                           return;
                         }
 
-                        if (fen >= 90) {
+                        if (100 >=fen >= 90) {
                           settxt("You can learn from advanced level course");
                           setOpen(true);
                           return;
                         }
-                        if (fen >= 75) {
+                        if (90 >fen >= 75) {
                           settxt("You can learn from the medium level course.");
                           setOpen(true);
                           return;
                         }
-                        if (fen >= 50) {
+                        if (fen < 75) {
                           settxt("You should learn from easy level course");
                           setOpen(true);
                           return;
