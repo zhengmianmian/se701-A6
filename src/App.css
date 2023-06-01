@@ -1,27 +1,38 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   text-align: center;
+  overflow: hidden;
 }
 :root {
   --main-height : 90vh;
 }
 .App header {
-  background-color: #3f8efc;
-  min-height: 10vh;
+  background-color: white;
+  min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  padding: 0 15%;
 }
 
 .link {
   margin: 5px;
-  padding: 10px;
+  padding: 15px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 20px;
-  color: white;
+  font-size: 40px;
+  color: black;
   transition: color 0.5s, background-color 0.5s;
 }
 .link:hover{
@@ -35,6 +46,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
+  overflow-y: auto;
   
 }
 
@@ -61,4 +74,16 @@
 .main .flower .flower-image {
   width: 80%; 
   height: auto; 
+}
+
+.footer {
+  background-color: #3f8efc;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  flex-shrink: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

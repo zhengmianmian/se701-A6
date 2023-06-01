@@ -29,15 +29,14 @@ function App() {
   return (
       <div className="App">
         <header>
-          <nav>
-            <Link className="link" to="/home" >HOME</Link>
-            <Link className="link" to="/learn" >LEARN</Link>
-            <Link className="link" to="/resources">RESOURCE</Link>
-            <Link className="link" to="/me">ME</Link>
-            <Link className="link" to="/reflections">REFLECTIONS</Link>
-
-          </nav>
-        </header>
+        <nav className="header-right">
+          <Link className="link" to="/home" >HOME</Link>
+          <Link className="link" to="/learn" >LEARN</Link>
+          <Link className="link" to="/resources">RESOURCE</Link>
+          <Link className="link" to="/me">ME</Link>
+          <Link className="link" to="/reflections">REFLECTIONS</Link>
+        </nav>
+      </header>
 
         <main className="main">
           <div className="routes">
@@ -74,7 +73,11 @@ function App() {
             <MainFlower />
           </div>
         </main>
-      </div>
+
+        <footer className="footer">
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+      </footer>
+    </div>
   );
 }
 

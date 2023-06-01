@@ -18,6 +18,7 @@ function HomePage() {
     );
     return (
         <div>
+            <h1 style={{ fontSize: '64px', color: 'black', textAlign: 'left', paddingLeft: '10%', marginTop: '-50px'}}>Math <br />Gardener.</h1>
             <div id='flower-container'>
                 {flowerItems}
             </div>
