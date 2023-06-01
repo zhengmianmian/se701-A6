@@ -8,10 +8,14 @@ function StartPage(props) {
     };
     return (
         <div>
-            <h1>Math gardener</h1>
+            <h1 style={{ fontSize: '110px', textAlign: 'left', marginTop: '-25px', marginLeft: "-56px", lineHeight: '1' }}>Math <br></br>Gardener.</h1>
             
-            <Button onClick={navigateToLevelTest} variant="contained" color="primary">Starting quiz</Button>
-            <p>A short quiz to determine your mathematical process.</p>
+            <button
+            className="custom-button" // Apply the custom CSS class to the button
+            onClick={navigateToLevelTest}>
+            Starting quiz
+            </button>
+            <p style={{ fontSize: '20px'}}>A short quiz to determine your mathematical prowess.</p>
         </div>
     );
 }

@@ -73,22 +73,23 @@ function MainFlower() {
       SetCanScore(canScore + 8)
     }
   };
+  const totalScore = score - canScore
+
 
   return (
     <div>
-      <h3>Your flower</h3>
-      <img
-        src={allImages[indexToDisplay]}
-        alt={`flower ${indexToDisplay + 1}`}
-        className="flower-image"
-      />
-      <Button onClick={flowerGrow} disabled={canDisable}>
-        <img style={{ width: 120, height: 120, Opacity: 0.1 }} src={wateringCan} alt="wateringcan0" />
+      
+      <Button onClick={flowerGrow} disabled={canDisable} style={{marginTop:'-90px'}}>
+        <img style={{ width: 150, height: 150, Opacity: 0.1 }} src={wateringCan} alt="wateringcan0" />
       </Button>
+      <h3>Water Droplets: {totalScore}</h3>
       <div></div>
-      <Button onClick={() => { setScore(score + 1) }} variant="contained" color="primary" style={{ marginLeft: '2px' }}>
-        score+1
+      <Button onClick={() => { setScore(score + 1) }} style={{marginTop:'10px'}}>
+        <img src={allImages[indexToDisplay]}
+          alt={`flower ${indexToDisplay + 1}`}
+          className="flower-image"/>
       </Button>
+      <br/>
     </div>
   );
 }

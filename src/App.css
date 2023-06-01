@@ -1,32 +1,50 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   text-align: center;
+  overflow: auto;
 }
 :root {
   --main-height : 90vh;
 }
 .App header {
-  background-color: #282c34;
-  min-height: 10vh;
+  background-color: white; 
+  min-height: 15vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  padding: 0 15%;
 }
 
 .link {
-  margin: 5px;
+  margin: 10px;
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
-  font-size: 20px;
-  color: #61dafb;
+  font-size: 40px;
+  color: black;
   transition: color 0.5s, background-color 0.5s;
 }
 .link:hover{
-  background-color: #61dafb;
+  background-color: #3f8efc;
   color: white;
+}
+
+.site-name {
+  margin-right: 190px;
+  white-space: nowrap;
+  font-size: 60px;
+  height: 60px
 }
 
 .App > .main{
@@ -35,8 +53,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
+  overflow-y: auto;
   
 }
+
+.custom-button {
+  font-size: 24px;
+  padding: 50px 100px;
+  color: white;
+  background-color: #3f8efc;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #3069c7;
+}
+
 .main .routes {
   margin: 5px;
   min-height: var(--main-height);
@@ -45,12 +81,27 @@
 }
 .main .flower {
   margin: 5px;
-  min-height: var(--main-height);
-  width: 20%;
-  
+  position: absolute;
+  bottom: 35px;
+  right: -90px;
+  width: 25%;
+  height: auto;
+  z-index: 1;
 }
 
 .main .flower .flower-image {
-  width: 80%; 
+  width: 90%; 
   height: auto; 
+}
+
+.footer {
+  background-color: #3f8efc;
+  color: #3f8efc;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  flex-shrink: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

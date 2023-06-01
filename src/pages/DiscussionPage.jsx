@@ -45,9 +45,9 @@ export default function DiscussionPage(props) {
     }, [posts])
 
     return (
-        <Box style={{ width: '100%', margin: '20px 3px' }}>
-            <Wrapper>
-                <Stack spacing={3}>
+        <Box style={{ width: '100%', margin: '20px -150px'}}>
+            <Wrapper >
+                <Stack spacing={3} style={{height: '410px', overflow: 'auto', marginTop: '-20px'}}>
                     {
                         postList.map((item, index) => {
                             return (<PostCard key={index} post={item} />)

@@ -41,20 +41,19 @@ const data = [
 function AboutMePage(props) {
     const {score, setScore} = useContext(AppContext)
     return (
-        <Container>
+        <Container style={{ position: 'relative', top: '-20px'}}>
 
-            <Box py={2}>
+            <Box py={2} >
                 <Typography variant="h3">Achievements</Typography>
                 <Typography variant="body1">Score: {score}</Typography>
             </Box>
 
-            
-            <Grid container spacing={2}>
+            <Grid container spacing={2} style={{ position: 'relative', top: '-50px', left: '-30px'}}>
                 <Grid item xs={12} md={6}>
                     <Box py={10}>
-                        <Typography variant="h3">Skill Matrix</Typography>
+                        <Typography variant="h3" style={{ marginLeft: '-150px'}}>Skill Matrix</Typography>
                         <RadarChart
-                            cx={300}
+                            cx={200}
                             cy={250}
                             outerRadius={200}
                             width={600}

@@ -51,9 +51,9 @@ const data = [
 function HomePage() {
     const flowerItems = flowers.map((item, index) =>
         <Grid item xs={3} key={index}>
-            <Box component="div" m={1} boxShadow={1} p={1} borderRadius={1}>
-                <Typography variant="h6" align="center">level {index + 1}</Typography>
-                <Card sx={{ width: '100%', height: 0, paddingBottom: '200%', position: 'relative', overflow: 'hidden' }}>
+            <Box component="div" m={1} boxShadow={0} p={1} borderRadius={1} sx={{ width: '100%', height: '400px' }}>
+                <Typography variant="h6" align="center"style={{ lineHeight: '8' }}>level {index + 1}</Typography>
+                <Card sx={{ width: '100%', height: 0, paddingBottom: '200%', position: 'relative', overflow: 'hidden', boxShadow: 'none' }}>
                     <CardMedia
                         component="img"
                         image={item}
@@ -66,42 +66,43 @@ function HomePage() {
     );
 
     return (
-        <Container maxWidth="lg">
+        
+        <Container maxWidth="lg"style={{ marginLeft: '50px' }}>
+            <h1 style={{ fontSize: '110px', textAlign: 'left', marginTop: '-25px', marginLeft: "-130px", lineHeight: '1' }}>Math <br></br>Gardener.</h1>
             <Grid container spacing={2} style={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                height: '100vh',
+                marginTop: '-180px',
+                height: '1vh',
             }}>
-                <div>
-                    <Grid item xs={6}>
-                        <Box>
-                            <RadarChart
-                                width={700}
-                                height={500}
-                                data={data}
-                            >
-                                <PolarGrid />
-                                <PolarAngleAxis dataKey="subject" />
-                                <PolarRadiusAxis />
-                                <Radar
-                                    name="Mike"
-                                    dataKey="A"
-                                    stroke="#8884d8"
-                                    fill="#8884d8"
-                                    fillOpacity={0.6}
-                                />
-                            </RadarChart>
-                        </Box>
-                    </Grid>
-                </div>
-                <Grid item xs={6}>
-                    <Grid container spacing={2}>
-                        {flowerItems}
-                    </Grid>
+                <Grid item xs={6} style={{ marginTop: '190px', marginLeft: "-130px" }}>
+                <Grid container spacing={2}>
+                    {flowerItems}
+                </Grid>
+                </Grid>
+                <Grid item xs={6} style={{ marginTop: '-100px' , marginLeft: "130px"}}>
+                <Box>
+                    <RadarChart
+                    width={700}
+                    height={500}
+                    data={data}
+                    >
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="subject" />
+                    <PolarRadiusAxis />
+                    <Radar
+                        name="Mike"
+                        dataKey="A"
+                        stroke="#8884d8"
+                        fill="#8884d8"
+                        fillOpacity={0.6}
+                    />
+                    </RadarChart>
+                </Box>
                 </Grid>
             </Grid>
-        </Container>
+            </Container>
 
     );
 }

@@ -89,6 +89,8 @@ function Chapter1Quiz3() {
             setShow(true);
             setScore(score + 2)
             window.$score = window.$score + 1
+            window.$geometry1 = 'green'
+            navigateToChapters();
         }else{
             setCorrect(false);
             setShow(true);
