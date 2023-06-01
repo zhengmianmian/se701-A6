@@ -81,6 +81,9 @@ function Chapter1Quiz() {
             window.$score = window.$score + 1
             setScore(score + 2)
         }else{
+            if(score === 2){
+                setScore(score - 2)
+            }
             setCorrect(false);
             setShow(true);
         }

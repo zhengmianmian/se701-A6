@@ -15,7 +15,9 @@ function Chapter1Quiz3() {
     const { score, setScore } = useContext(AppContext)
 
     const navigateToQuiz2 = () => {
-        setScore(score + 8)
+        if(score === 8){
+            setScore(score - 2)
+        }
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2');
     };
 
@@ -90,6 +92,9 @@ function Chapter1Quiz3() {
             setScore(score + 2)
             window.$score = window.$score + 1
         }else{
+            if(score === 8){
+                setScore(score - 2)
+            }
             setCorrect(false);
             setShow(true);
         }
@@ -131,7 +136,7 @@ function Chapter1Quiz3() {
                 style={{float: 'right'}}
                 size='small'
                 onClick={navigateToChapters}>
-                Finish quiz//Grow flower
+                Finish quiz
             </Button>
 
             <Button

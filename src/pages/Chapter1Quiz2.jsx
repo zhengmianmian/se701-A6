@@ -20,6 +20,9 @@ function Chapter1Quiz2() {
     };
 
     const navigateToQuiz1 = () => {
+        if(score === 6){
+            setScore(score - 4)
+        }
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz');
     };
     const navigateToHint = () => {
@@ -87,6 +90,9 @@ function Chapter1Quiz2() {
             setCorrect(true);
             setShow(true);
         }else{
+            if(score === 6){
+                setScore(score - 4)
+            }
             setCorrect(false);
             setShow(true);
         }
