@@ -7,7 +7,7 @@ import areaLearn from '../../assets/images/Geometry/area-volume.png'
 function Chapter4(props) {
     const navigate = useNavigate();
     return (
-        <div style={{height:"600px", overflow:"scroll" }}>
+        <div>
             <h1>Chapter 4 - Volume of Shapes</h1>
             <p>Volume is the amount of space that a substance or object occupies.</p>
             
