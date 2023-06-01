@@ -6,24 +6,24 @@ function TwoDShapePage(props) {
     const navigate = useNavigate();
     const chapters = [
         {
-            name: 'chapter1',
+            name: 'chapter 1',
             path: '/learn/geometry/2d-shapes/chapter1',
             describe: 'Identifying and Classifying'
         },
         {
-            name: 'chapter2',
-            path: '/learn/geometry/2d-shapes',
+            name: 'chapter 2',
+            path: '/learn/geometry/2d-shapes/chapter2',
             describe: 'Sides and Angles'
         },
         {
-            name: 'chapter3',
-            path: '/learn/geometry/2d-shapes',
-            describe: 'Some stuff about Geometry'
+            name: 'chapter 3',
+            path: '/learn/geometry/2d-shapes/chapter3',
+            describe: 'Area of Shapes'
         },
         {
-            name: 'chapter4',
-            path: '/learn/geometry/2d-shapes',
-            describe: 'Some stuff about Geometry'
+            name: 'chapter 4',
+            path: '/learn/geometry/2d-shapes/chapter4',
+            describe: 'Volume of Shapes'
         }
     ]
 

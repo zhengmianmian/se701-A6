@@ -41,11 +41,16 @@
   margin: 5px;
   min-height: var(--main-height);
   width: 80%;
-  border: 1px solid #61dafb;
+  
 }
 .main .flower {
   margin: 5px;
   min-height: var(--main-height);
   width: 20%;
-  border: 1px solid #61dafb;
+  
+}
+
+.main .flower .flower-image {
+  width: 80%; 
+  height: auto; 
 }
