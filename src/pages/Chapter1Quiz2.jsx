@@ -5,16 +5,22 @@ import '../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
 import { LuFlower2 } from "react-icons/lu";
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {useNavigate} from "react-router-dom";
+import {AppContext} from "../AppContextProvider";
 
 
 function Chapter1Quiz2() {
 
     const navigate = useNavigate();
+    const { score, setScore } = useContext(AppContext)
 
     const navigateToQuiz3 = () => {
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3');
+    };
+
+    const navigateToQuiz1 = () => {
+        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz');
     };
     const navigateToHint = () => {
         if (window.$score > 0) {
@@ -77,6 +83,7 @@ function Chapter1Quiz2() {
     function IsCorrect(answer){
         if(answer === 'correct'){
             window.$score = window.$score + 1
+            setScore(score + 4)
             setCorrect(true);
             setShow(true);
         }else{
@@ -121,6 +128,13 @@ function Chapter1Quiz2() {
                 style={{float: 'right'}}
                 size='small'>
                 Next Question
+            </Button>
+
+            <Button onClick={navigateToQuiz1}
+                color='primary'
+                style={{float: 'left'}}
+                size='small'>
+                Previous Question
             </Button>
 
 
