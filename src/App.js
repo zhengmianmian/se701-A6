@@ -75,7 +75,7 @@ function App() {
         </main>
 
         <footer className="footer">
-        <p>&copy; 2023 Your Website. All rights reserved.</p>
+        <p> -</p>
       </footer>
     </div>
   );

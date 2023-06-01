@@ -13,13 +13,15 @@ function HomePage() {
     const flowerItems = flowers.map((item,index)=>
         <div key={index}>
             <h3>level {index+1} </h3>
-            <img src={item} alt="flower" />
+            <img src={item} alt="flower" style={{ width: '175px', height: 'auto' }} />
         </div>
     );
     return (
         <div>
-            <h1 style={{ fontSize: '64px', color: 'black', textAlign: 'left', paddingLeft: '10%', marginTop: '-50px'}}>Math <br />Gardener.</h1>
-            <div id='flower-container'>
+            <h1 style={{ fontSize: '100px', color: 'black', 
+                        textAlign: 'left', paddingLeft: '10%', marginTop: '-25px', 
+                        lineHeight: '1'}}>Math <br />Gardener.</h1>
+            <div id="flower-container" style={{ marginTop: '-20px' }}>
                 {flowerItems}
             </div>
         </div>

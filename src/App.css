@@ -15,7 +15,7 @@ html, body {
   --main-height : 90vh;
 }
 .App header {
-  background-color: white;
+  background-color: white; 
   min-height: 15vh;
   display: flex;
   flex-direction: row;
