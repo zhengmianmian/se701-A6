@@ -11,7 +11,7 @@ function Chapter(props) {
     };
 
     return (
-        <div style={{height:"600px", overflow:"scroll" }}>
+        <div >
             <h1>Chapter1-Identify shapes</h1>
             <Card style={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
                 <ReactPlayer

@@ -7,7 +7,7 @@ import perimeterLearn from '../../assets/images/Geometry/PerimeterLearn.jpg'
 function Chapter2(props) {
     const navigate = useNavigate();
     return (
-        <div style={{height:"600px", overflow:"scroll" }}>
+        <div >
             <h1>Chapter 2 - Sides and Angles</h1>
             <div>
                 <p>A perimeter is the total length around the outside of the shape</p>

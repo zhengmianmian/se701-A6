@@ -7,7 +7,7 @@ import areaLearn from '../../assets/images/Geometry/AreaLearn.webp'
 function Chapter3(props) {
     const navigate = useNavigate();
     return (
-        <div style={{height:"600px", overflow:"scroll" }}>
+        <div >
             <h1>Chapter 3 - Area of Squares and Rectangles</h1>
             
             <Card style={{ padding: '10px', display: 'flex', justifyContent: 'center' }}>
