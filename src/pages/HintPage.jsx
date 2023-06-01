@@ -16,7 +16,8 @@ function HintPage(props) {
 
     return (
         <div className="container">
-            <h1 className="title" style={{textAlign:"left", marginLeft: '5%', fontSize: '49px'}}>Math Gardener  Remaining Hints:{score}</h1>
+            <h1 className="title" style={{textAlign:"left", marginLeft: '5%', fontSize: '49px'}}>Math Gardener</h1>
+            <h3 style={{textAlign:"left", marginLeft: '5%'}}>Remaining Hints: {score}</h3>
             <div className="content" >
                 <p className="subtitle" style={{ color: '#38b6ff', textAlign: 'left', marginLeft: '7%', fontSize: '25px'}}>Hint:</p>
                 <ul style={{ textAlign: 'left', marginLeft: '5%', marginTop: '1%'}}> Here's a hint to your question:<br />
