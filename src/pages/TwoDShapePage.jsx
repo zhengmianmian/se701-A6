@@ -8,28 +8,33 @@ function TwoDShapePage(props) {
         {
             name: 'chapter 1',
             path: '/learn/geometry/2d-shapes/chapter1',
-            describe: 'Identifying and Classifying'
+            describe: 'Identifying and Classifying',
+            color: window.$geometry1
         },
         {
             name: 'chapter 2',
             path: '/learn/geometry/2d-shapes/chapter2',
-            describe: 'Sides and Angles'
+            describe: 'Sides and Angles',
+            color: window.$geometry2
+
         },
         {
             name: 'chapter 3',
             path: '/learn/geometry/2d-shapes/chapter3',
-            describe: 'Area of Shapes'
+            describe: 'Area of Shapes',
+            color: 'primary'
         },
         {
             name: 'chapter 4',
             path: '/learn/geometry/2d-shapes/chapter4',
-            describe: 'Volume of Shapes'
+            describe: 'Volume of Shapes',
+            color: 'primary'
         }
     ]
 
     const chapterItems = chapters.map((item, index) =>
         <div key={index}>
-            <Button onClick={() => navigate(item.path)} className="topicBtn" variant="contained" color="primary">{item.name}</Button>
+            <Button onClick={() => navigate(item.path)} className="topicBtn" variant="contained" style={{backgroundColor: item.color}}>{item.name}</Button>
             <p>{item.describe}</p>
         </div>
     );

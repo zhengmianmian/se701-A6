@@ -1,46 +1,38 @@
 import styled from '@emotion/styled';
-import Hexagon_inLife from '../assets/images/Hexagon_inLife.jpg'
-import '../assets/css/QuizPage.css'
+import Triangle_inLife from '../../assets/images/LevelTest2Geometry/Perimeter3.png'
+import '../../assets/css/QuizPage.css'
 import Button from '@mui/material/Button';
+import { useNavigate} from 'react-router-dom';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
 import { LuFlower2 } from "react-icons/lu";
 import React, {useContext, useState} from 'react';
-import {useNavigate} from "react-router-dom";
-import {AppContext} from "../AppContextProvider";
+import {AppContext} from "../../AppContextProvider";
 
 
-function Chapter1Quiz3() {
-
+function Chapter2Quiz3() {
     const navigate = useNavigate();
     const { score, setScore } = useContext(AppContext)
-
     const navigateToQuiz2 = () => {
-        setScore(score + 8)
-        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2');
+        navigate('/learn/geometry/2d-shapes');
     };
-
-    const navigateToChapters = () => {
-        navigate('/learn/geometry/2d-shapes')
-    }
-
     const navigateToHint = () => {
         if (window.$score > 0) {
             window.$score = window.$score - 1
-            navigate('/hint', {state:{id:"chapter1quiz"}})
+            navigate('/hint', {state:{id:"chapter2quiz"}})
         }
     };
 
     const ButtonGroup = styled.button`
-    background: white;
-    color: black;
-    font-size: 20px;
-    padding: 10px 60px;
-    border: 2px solid #61dafb;
-    border-radius: 15px;
-    margin: 10px 10px;
-    cursor: pointer;
-    variant= outlined;
-   
+      background: white;
+      color: black;
+      font-size: 20px;
+      padding: 10px 60px;
+      border: 2px solid #61dafb;
+      border-radius: 15px;
+      margin: 10px 10px;
+      cursor: pointer;
+      variant= outlined;
+
     `;
 
     const ButtonHint = styled.button`
@@ -56,40 +48,39 @@ function Chapter1Quiz3() {
 
     const buttons=[
         {
-            name:'1',
+            name:'7',
             answer:'wrong'
         },
         {
-            name:'6',
+            name:'24',
             answer:'correct'
         },
         {
-            name:'3',
+            name:'144',
             answer:'wrong'
         },
         {
-            name:'2',
+            name:'12',
             answer:'wrong'
         },
         {
-            name:'5',
-            answer:'wrong'
+            name:'14',
+            answer:'correct'
         },
 
     ]
 
     const [isCorrect, setCorrect] = useState(null);
     const [show, setShow] = useState(false);
-    const [water, fillWater] = useState(false);
-
 
     function IsCorrect(answer){
         if(answer === 'correct'){
             setCorrect(true);
             setShow(true);
-            setScore(score + 2)
             window.$score = window.$score + 1
-            window.$geometry1 = 'green'
+            setScore(score + 2)
+            window.$geometry2 = 'green'
+            navigateToQuiz2();
         }else{
             setCorrect(false);
             setShow(true);
@@ -103,8 +94,7 @@ function Chapter1Quiz3() {
     return (
         <>
             <div className="quizHeader">Identify shapes Quiz</div>
-            <div className="quizHeader">Q3. Answer the following addition problem:</div>
-
+            <div className="quizHeader">Q2. Answer the following perimeter problem:</div>
             <ButtonHint
                 onClick={navigateToHint}
                 style={{float: 'right'}}>
@@ -118,29 +108,22 @@ function Chapter1Quiz3() {
                 <TbBulb size="1.5em" color="cornflowerblue"/>
             </ButtonHint>
             <br></br>
-            <div className="quizQuestion">How many sides does below shapes have?</div>
+            <div className="quizQuestion">What is the perimeter of the shape?</div>
             <br></br>
-            <img style={{width:170, height:170, alignSelf: 'center'}} src={Hexagon_inLife} alt="Hexagon_inLife" />
+            {/*<img style={{width:170, height:170, alignSelf: 'left'}} src={triangle} alt="triangle" />*/}
+            <img style={{width:530, height:309, alignSelf: 'center'}} src={Triangle_inLife} alt="Triangle_inLife" />
             <br></br>
             {buttonsItems}
             <br></br>
             {show && isCorrect && <div className="answer_react">Great!<LuFlower2 size="1.5em" color="cornflowerblue"/></div>}
             {show && !isCorrect && <div className="answer_react">Try Again!</div>}
-            <br></br>
-            <Button
-                color='primary'
-                style={{float: 'right'}}
-                size='small'
-                onClick={navigateToChapters}>
-                Finish quiz//Grow flower
-            </Button>
 
-            <Button
-                color='primary'
-                style={{float: 'left'}}
-                size='small'
-                onClick={navigateToQuiz2}>
-                Previous Question
+            <br></br>
+            <Button onClick={navigateToQuiz2}
+                    color='primary'
+                    style={{float: 'right'}}
+                    size='small'>
+                Next Question
             </Button>
 
 
@@ -148,4 +131,4 @@ function Chapter1Quiz3() {
     );
 }
 
-export default Chapter1Quiz3;
+export default Chapter2Quiz3;

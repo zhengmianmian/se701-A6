@@ -86,7 +86,7 @@ function MainFlower() {
         <img style={{ width: 120, height: 120, Opacity: 0.1 }} src={wateringCan} alt="wateringcan0" />
       </Button>
       <div></div>
-      <Button onClick={() => { setScore(score + 1) }} variant="contained" color="primary" style={{ marginLeft: '2px' }}>
+      <Button onClick={() => { setScore(score + 2) }} variant="contained" color="primary" style={{ marginLeft: '2px' }}>
         score+1
       </Button>
     </div>

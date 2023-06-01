@@ -22,6 +22,9 @@ import StartPage from "./pages/StartPage";
 import Chapter4 from "./pages/two-d-shapes-chapters/Chapter4";
 import Chapter3 from "./pages/two-d-shapes-chapters/Chapter3";
 import Chapter2 from "./pages/two-d-shapes-chapters/Chapter2";
+import Chapter2Quiz1 from "./pages/chapter2quizes/chapter2quiz1"
+import Chapter2Quiz2 from "./pages/chapter2quizes/chapter2quiz2";
+import Chapter2Quiz3 from "./pages/chapter2quizes/Chapter2Quiz3";
 
 
 function App() {
@@ -57,6 +60,9 @@ function App() {
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz" element={<Chapter1Quiz />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2" element={<Chapter1Quiz2 />} ></Route>
                   <Route path="/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3" element={<Chapter1Quiz3 />} ></Route>
+                  <Route path="/learn/geometry/2d-shapes/chapter2/chapter2quiz" element={<Chapter2Quiz1 />} ></Route>
+                  <Route path="/learn/geometry/2d-shapes/chapter2/chapter2quiz2" element={<Chapter2Quiz2 />} ></Route>
+                  <Route path="/learn/geometry/2d-shapes/chapter2/chapter2quiz3" element={<Chapter2Quiz3 />} ></Route>
                 </Route>
                 <Route path="learn/geometry/unittest" element={<Chapter1Quiz />} />
                 <Route path="learn/geometry/personaltest/" element={<PersonalUnitTest/>} />
