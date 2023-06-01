@@ -69,7 +69,7 @@ function MainFlower() {
     if ((score - canScore) === 8) {
       setWateringCan(Wateringcan0)
       SetCanScore(score)
-    } else {
+    }else {
       SetCanScore(canScore + 8)
     }
   };
