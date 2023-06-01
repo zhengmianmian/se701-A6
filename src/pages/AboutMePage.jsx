@@ -8,32 +8,32 @@ import { Container, Box, Grid, Typography } from '@mui/material';
 const data = [
     {
       subject: 'Geometry',
-      A: 120,
+      A: 50,
       fullMark: 150,
     },
     {
       subject: 'Arithmetic',
-      A: 80,
+      A: 90,
       fullMark: 150,
     },
     {
       subject: 'Fractions',
-      A: 88,
+      A: 90,
       fullMark: 150,
     },
     {
       subject: 'Prime Numbers',
-      A: 120,
+      A: 90,
       fullMark: 150,
     },
     {
-      subject: 'Basic Algebra',
-      A: 60,
+      subject: 'Algebra',
+      A: 90,
       fullMark: 150,
     },
     {
       subject: 'Equations',
-      A: 40,
+      A: 150,
       fullMark: 150,
     },
   ];
@@ -55,7 +55,7 @@ function AboutMePage(props) {
                         <RadarChart
                             cx={200}
                             cy={250}
-                            outerRadius={200}
+                            outerRadius={125}
                             width={600}
                             height={600}
                             data={data}
