@@ -5,15 +5,16 @@ import Button from '@mui/material/Button';
 import { useNavigate} from 'react-router-dom';
 import { TbBulb, TbInputSearch } from "react-icons/tb";
 import { LuFlower2 } from "react-icons/lu";
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
+import {AppContext} from "../AppContextProvider";
 
 
 function Chapter1Quiz() {
     const navigate = useNavigate();
+    const { score, setScore } = useContext(AppContext)
     const navigateToQuiz2 = () => {
         navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2');
     };
-
     const navigateToHint = () => {
         if (window.$score > 0) {
             window.$score = window.$score - 1
@@ -78,6 +79,7 @@ function Chapter1Quiz() {
             setCorrect(true);
             setShow(true);
             window.$score = window.$score + 1
+            setScore(score + 2)
         }else{
             setCorrect(false);
             setShow(true);

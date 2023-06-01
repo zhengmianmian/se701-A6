@@ -14,11 +14,12 @@ function Chapter1Quiz3() {
     const navigate = useNavigate();
     const { score, setScore } = useContext(AppContext)
 
-    const navigateToQuiz4 = () => {
-        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2/chapter1quiz3/chapter1quiz4');
-    };
-    const navigateToChapters = () => {
+    const navigateToQuiz2 = () => {
         setScore(score + 8)
+        navigate('/learn/geometry/2d-shapes/chapter1/chapter1quiz/chapter1quiz2');
+    };
+
+    const navigateToChapters = () => {
         navigate('/learn/geometry/2d-shapes')
     }
 
@@ -86,6 +87,7 @@ function Chapter1Quiz3() {
         if(answer === 'correct'){
             setCorrect(true);
             setShow(true);
+            setScore(score + 2)
             window.$score = window.$score + 1
         }else{
             setCorrect(false);
@@ -130,6 +132,14 @@ function Chapter1Quiz3() {
                 size='small'
                 onClick={navigateToChapters}>
                 Finish quiz//Grow flower
+            </Button>
+
+            <Button
+                color='primary'
+                style={{float: 'left'}}
+                size='small'
+                onClick={navigateToQuiz2}>
+                Previous Question
             </Button>
 
 
