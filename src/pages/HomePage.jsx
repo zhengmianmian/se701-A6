@@ -66,12 +66,15 @@ function HomePage() {
     );
 
     return (
-        <Container maxWidth="lg">
+        
+        <Container maxWidth="lg"style={{ marginLeft: '50px' }}>
+            <h1 style={{ fontSize: '110px', textAlign: 'left', marginTop: '-25px', marginLeft: "-130px", lineHeight: '1' }}>Math <br></br>Gardener.</h1>
             <Grid container spacing={2} style={{
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                height: '100vh',
+                marginTop: '-120px',
+                height: '1vh',
             }}>
                 <Grid item xs={6}>
                 <Grid container spacing={2}>
