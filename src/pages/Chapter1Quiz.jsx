@@ -80,6 +80,7 @@ function Chapter1Quiz() {
             setShow(true);
             window.$score = window.$score + 1
             setScore(score + 2)
+            navigateToQuiz2();
         }else{
             setCorrect(false);
             setShow(true);

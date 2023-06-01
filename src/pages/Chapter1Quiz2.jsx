@@ -86,6 +86,7 @@ function Chapter1Quiz2() {
             setScore(score + 4)
             setCorrect(true);
             setShow(true);
+            navigateToQuiz3();
         }else{
             setCorrect(false);
             setShow(true);
