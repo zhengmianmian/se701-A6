@@ -4,7 +4,7 @@ function Chapter3(props) {
     const navigate = useNavigate();
     return (
         <div>
-            <h1>Chapter3 - Sides and Angles</h1>
+            <h1>Chapter 3 - Area of shapes</h1>
             <div>
                 <p>learning stuff</p>
             </div>
