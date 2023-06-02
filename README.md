@@ -20,3 +20,16 @@ Once you start the app, you can see this page.
 ## HomePage
 This is our homepage.
 ![HomePage](https://github.com/zhengmianmian/se701-A6/blob/main/public/image/homepage.PNG)
+
+## Features inplemented
+1.  Flower model
+2.  Level test
+3.  Knowledge map
+4.  Table of content
+5.  Material teaching
+6.  Chapter quiz
+7.  Hint system 
+8.  Personalize Unit Test 
+9.  Reflection
+10. Discussion
+11. Useful links
