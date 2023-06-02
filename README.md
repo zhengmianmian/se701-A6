@@ -4,7 +4,7 @@ This is the assignment6 of group 10 for se701.
 ## run the project
 1. Clone the project.
 ```bash
-$git clone url
+$git clone https://github.com/zhengmianmian/se701-A6.git
 ```
 2. Run the project
 ```bash
