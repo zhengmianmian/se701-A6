@@ -1,6 +1,8 @@
 # SE701-A6
 This is the assignment6 of group 10 for se701.
-
+The website is dedicated to teaching Year 6 students mathematics.
+When designing the website, we incorporated educational theories including Behaviourism and Scaffolding mainly.
+Our goal is to create an engaging and effective learning environment.
 ## Run the project
 1. Clone the project.
 ```bash
